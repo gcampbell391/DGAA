@@ -3,7 +3,7 @@ class CreateDgCourses < ActiveRecord::Migration[6.0]
     create_table :dg_courses do |t|
       t.integer :DGCourseReviewApiId
       t.string :name
-      t.string :street
+      t.string :street, :default => "No street found..."
       t.string :city
       t.string :state
       t.integer :zip

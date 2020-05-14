@@ -10,11 +10,7 @@ api_key = ENV["API_KEY"]
 sig_key = ENV["SIG_KEY"]
 final_sig_key = api_key + sig_key + "findloc"
 digest_sig_key = Digest::MD5.hexdigest final_sig_key
-puts "Sig Key: " + sig_key
-puts "API Key: " + api_key
-puts "Final Key: " + digest_sig_key
 coursesURL = "https://www.dgcoursereview.com/api_test/?key="+api_key+"&mode=findloc&city=a&state=NY&country=US&sig="+digest_sig_key
-puts coursesURL
 coursesResponse = RestClient.get coursesURL
 coursesArray = JSON.parse(coursesResponse)
 

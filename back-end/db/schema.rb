@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_05_13_180335) do
   create_table "dg_courses", force: :cascade do |t|
     t.integer "DGCourseReviewApiId"
     t.string "name"
-    t.string "street"
+    t.string "street", default: "No street found..."
     t.string "city"
     t.string "state"
     t.integer "zip"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2020_05_13_180335) do
   create_table "games", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "dgcourse_id", null: false
-    t.integer "score"
+    t.integer "score", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["dgcourse_id"], name: "index_games_on_dgcourse_id"
@@ -53,8 +53,8 @@ ActiveRecord::Schema.define(version: 2020_05_13_180335) do
     t.integer "dgcourse_id", null: false
     t.string "tee1Length"
     t.string "tee1Par"
-    t.string "tee2Length"
-    t.string "tee2Par"
+    t.string "tee2Length", default: "0"
+    t.string "tee2Par", default: "0"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["dgcourse_id"], name: "index_holes_on_dgcourse_id"
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 2020_05_13_180335) do
   create_table "scorecards", force: :cascade do |t|
     t.integer "hole_id", null: false
     t.integer "game_id", null: false
-    t.integer "strokeCount"
+    t.integer "strokeCount", default: 1
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["game_id"], name: "index_scorecards_on_game_id"
