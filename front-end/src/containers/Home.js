@@ -5,6 +5,7 @@ import { userLogin } from "../actions/userActions"
 import { userLogout } from "../actions/userActions"
 import PlayerCard from "../components/PlayerCard"
 import Footer from "../components/Footer"
+import AccountHomeMap from "../components/AccountHomeMap"
 
 
 class Home extends React.Component {
@@ -37,6 +38,7 @@ class Home extends React.Component {
         return (
             <div className="welcomeBodyContainer">
                 <Header handleLogOutClick={this.handleLogOutClick} />
+                <AccountHomeMap user={this.props.user[0].user} />
                 <PlayerCard user={this.props.user[0].user} />
                 <Footer />
             </div>

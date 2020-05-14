@@ -2,18 +2,19 @@ import React from 'react'
 import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
 import Geocode from "react-geocode";
 
+
 class AccountHomeMap extends React.Component {
     state = {
-        positionCoordinates: [33.7562, -84.3885],
+        courses: [],
+        positionCoordinates: [40.8831, -72.9422],
         usersCoordinates: [0, 0]
     }
 
-
-
-
     componentDidMount() {
+        this.fetchCourses()
+        console.log("User:", this.props.user)
         const user = this.props.user ? this.props.user : null
-        const userAddress = user ? `${user.street_name} ${user.city} ${user.state} ${user.zip_code}` : "no user"
+        const userAddress = user ? `${user.street} ${user.city} ${user.state} ${user.zip}` : "no user"
         const GOOGLE_API_KEY = `${process.env.REACT_APP_GOOGLE_MAP_KEY}`
         console.log("Map User Address: ", userAddress)
         console.log("API KEY", GOOGLE_API_KEY)
@@ -28,15 +29,38 @@ class AccountHomeMap extends React.Component {
                 console.error(error);
             }
         );
-
     }
-    render() {
 
+    fetchCourses = () => {
+        fetch("http://localhost:3000/dg_courses")
+            .then(resp => resp.json())
+            .then(data => {
+                this.setState({ courses: data })
+            })
+    }
+
+    createCourseMarkers = (course) => {
+        const courseCoords = [course.courseLat, course.courseLong]
+        return (
+            <Marker position={courseCoords} >
+                <Popup>
+                    <p>DGCourse Review Rating:</p><img src={course.dgRatingImg}></img>
+                    <h1>{course.name}</h1>
+                    <p>{course.street} {course.city} {course.state}, {course.zip}</p>
+                    <p>Holes: {course.holes}</p>
+                    <a href={course.dgCourseLink} target="_blank">For More Details Click Here</a>
+                </Popup>
+            </Marker>
+        )
+    }
+
+    render() {
+        console.log("Courses:", this.state.courses)
         console.log("Current User Coordinates: ", this.state.usersCoordinates)
         return (
             <LeafletMap
-                center={this.props.user ? this.state.usersCoordinates : this.state.positionCoordinates}
-                zoom={18}
+                center={this.state.positionCoordinates}
+                zoom={7}
                 maxZoom={20}
                 attributionControl={true}
                 zoomControl={true}
@@ -49,14 +73,12 @@ class AccountHomeMap extends React.Component {
                 <TileLayer
                     url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
                 />
-                <Marker position={this.state.positionCoordinates}>
-                    <Popup>
-                        <img src={require("../images/market365Logo.png")} height="40"></img>
-                    </Popup>
-                </Marker>
+                {this.state.courses.map(course => {
+                    return this.createCourseMarkers(course)
+                })}
                 {this.props.user ? <Marker position={this.state.usersCoordinates}>
                     <Popup>
-                        <img src={this.props.user.img} height="40"></img>
+                        <img src={this.props.user.userImg} height="40" alt="User Home"></img>
                     </Popup>
                 </Marker>
                     :
