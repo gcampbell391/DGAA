@@ -7899,3 +7899,284 @@ Processing by DgCoursesController#index as */*
 Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.7ms | Allocations: 20115)
 
 
+Started POST "/login" for ::1 at 2020-05-14 18:21:53 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 230ms (Views: 0.5ms | ActiveRecord: 2.5ms | Allocations: 13406)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 18:21:54 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (3.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 91ms (Views: 85.6ms | ActiveRecord: 4.0ms | Allocations: 30398)
+
+
+Started POST "/login" for ::1 at 2020-05-14 20:43:34 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 250ms (Views: 0.7ms | ActiveRecord: 3.1ms | Allocations: 13405)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 20:43:34 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (2.8ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 102ms (Views: 95.8ms | ActiveRecord: 3.5ms | Allocations: 30395)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 20:46:37 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (38.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 61ms (Views: 22.5ms | ActiveRecord: 38.2ms | Allocations: 20135)
+
+
+Started POST "/login" for ::1 at 2020-05-14 20:52:50 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 217ms (Views: 2.6ms | ActiveRecord: 0.9ms | Allocations: 948)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 20:52:50 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (2.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 116ms (Views: 113.1ms | ActiveRecord: 2.4ms | Allocations: 20154)
+
+
+Started GET "/logout" for ::1 at 2020-05-14 21:03:01 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#logout as */*
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1872)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:03:01 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (3.8ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 101ms (Views: 96.5ms | ActiveRecord: 3.8ms | Allocations: 20164)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:03:50 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 213ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 937)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:03:50 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.8ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.8ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:11:00 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 216ms (Views: 2.4ms | ActiveRecord: 0.9ms | Allocations: 948)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:11:00 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (2.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 83ms (Views: 80.0ms | ActiveRecord: 2.2ms | Allocations: 20157)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:13:53 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 219ms (Views: 3.1ms | ActiveRecord: 1.0ms | Allocations: 909)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:13:53 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 1.4ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:14:47 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 212ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:14:48 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.0ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 1.0ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:18:50 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 217ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 909)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:18:51 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.7ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.7ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:24:18 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 219ms (Views: 2.6ms | ActiveRecord: 1.0ms | Allocations: 908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:24:18 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 1.1ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:24:49 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 213ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:24:49 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.0ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 1.0ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:26:58 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 215ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:26:59 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.7ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.7ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:28:24 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 213ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:28:24 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.8ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 80ms (Views: 78.9ms | ActiveRecord: 0.8ms | Allocations: 20118)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:31:13 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 211ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:31:13 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.9ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.9ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:32:53 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 210ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:32:53 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.6ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:36:26 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 212ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:36:26 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 1.4ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:39:37 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 218ms (Views: 3.0ms | ActiveRecord: 0.8ms | Allocations: 908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:39:37 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 1.4ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-14 21:42:01 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 211ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-14 21:42:01 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.9ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.9ms | Allocations: 20115)
+
+

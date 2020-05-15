@@ -81,6 +81,11 @@ margin-left: 5px;
 background-color: lightgray;
   }
 
+  .HomeBody{
+    height: 100%;
+    display: flex;
+  }
+
 .playerCard{
   box-shadow: 2px 2px 11px black;
   margin-top: 50px;
@@ -90,10 +95,9 @@ background-color: lightgray;
   padding-top: 20px;
   border-radius: 10px;
   margin-bottom: 50px;
-  margin-right: 160px;
-  margin-left: 160px;
-  padding-right: 10px;
   padding-bottom: 5px;
+  margin-right: 20px;
+  margin-left: 10px;
 }
 
 .playerCardPicture{
@@ -107,7 +111,7 @@ background-color: lightgray;
   border-bottom: 2px solid limegreen;
   padding-left: 5px;
   padding-top: 5px;
-  width: 40%;
+  width: 20%;
 }
 
 
@@ -125,6 +129,15 @@ background-color: lightgray;
   margin-bottom: 5px;
 }
 
+.mapFilterContainer{
+  width: 40%;
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  box-shadow: 2px 2px 11px black;
+}
+
 .leaflet-container {
   margin-top: 20px;
   height: 350px;
@@ -135,12 +148,13 @@ background-color: lightgray;
 .leaflet-popup-content-wrapper {
   background-color: limegreen;
   color:white;
-  opacity: 0.8;
+  opacity: 0.9;
 }
-
-
 .mypopup.leaflet-popup-tip {
   background: red;
+}
+#mapFilerHeader{
+  text-align: center;
 }
   
 

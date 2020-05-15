@@ -40,6 +40,14 @@ class AccountHomeMap extends React.Component {
     }
 
     createCourseMarkers = (course) => {
+        if (course.name.toLowerCase().includes(this.props.mapNameSearchTerm)) {
+            if (course.city.toLowerCase().includes(this.props.mapCitySearchTerm)) {
+                return this.courseMarkerHelperMethod(course)
+            }
+        }
+    }
+
+    courseMarkerHelperMethod = (course) => {
         const courseCoords = [course.courseLat, course.courseLong]
         return (
             <Marker position={courseCoords} >

@@ -13,7 +13,8 @@ class Home extends React.Component {
         super()
         this.state = {
             currentUser: null,
-            redirect: true
+            mapNameSearchTerm: "",
+            mapCitySearchTerm: ""
         }
     }
 
@@ -33,13 +34,30 @@ class Home extends React.Component {
             })
     }
 
+    //Handles input change for map filter search
+    handleNameFilterChange = (event) => {
+        this.setState({ mapNameSearchTerm: event.target.value })
+    }
+
+    handleCityFilterChange = (event) => {
+        this.setState({ mapCitySearchTerm: event.target.value })
+    }
+
     render() {
         console.log("Home", this.state.currentUser)
         return (
             <div className="welcomeBodyContainer">
                 <Header handleLogOutClick={this.handleLogOutClick} />
-                <AccountHomeMap user={this.props.user[0].user} />
-                <PlayerCard user={this.props.user[0].user} />
+                <AccountHomeMap
+                    user={this.props.user[0].user}
+                    mapNameSearchTerm={this.state.mapNameSearchTerm}
+                    mapCitySearchTerm={this.state.mapCitySearchTerm}
+                />
+                <PlayerCard
+                    user={this.props.user[0].user}
+                    handleNameFilterChange={this.handleNameFilterChange}
+                    handleCityFilterChange={this.handleCityFilterChange}
+                />
                 <Footer />
             </div>
 
