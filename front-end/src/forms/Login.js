@@ -14,6 +14,7 @@ const Login = (props) => (
                 <Segment>
                     <Form size="large" onSubmit={(event) => props.handleLoginSubmit(event)}>
                         <Form.Input
+                            required
                             fluid
                             icon="user"
                             iconPosition="left"
@@ -21,6 +22,7 @@ const Login = (props) => (
                             id="emailInput"
                         />
                         <Form.Input
+                            required
                             fluid
                             icon="lock"
                             iconPosition="left"

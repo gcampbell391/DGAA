@@ -1,10 +1,7 @@
 import React from 'react';
 import {
     Button,
-    Form,
-    Grid,
-    Message,
-    Segment,
+    Form
 } from 'semantic-ui-react';
 
 const MapSearch = (props) => (

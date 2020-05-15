@@ -12,17 +12,13 @@ class AccountHomeMap extends React.Component {
 
     componentDidMount() {
         this.fetchCourses()
-        console.log("User:", this.props.user)
         const user = this.props.user ? this.props.user : null
         const userAddress = user ? `${user.street} ${user.city} ${user.state} ${user.zip}` : "no user"
         const GOOGLE_API_KEY = `${process.env.REACT_APP_GOOGLE_MAP_KEY}`
-        console.log("Map User Address: ", userAddress)
-        console.log("API KEY", GOOGLE_API_KEY)
         Geocode.setApiKey(GOOGLE_API_KEY);
         Geocode.fromAddress(userAddress).then(
             response => {
                 const { lat, lng } = response.results[0].geometry.location;
-                console.log("It Worked!", lat, lng);
                 this.setState({ usersCoordinates: [lat, lng] })
             },
             error => {
@@ -50,13 +46,13 @@ class AccountHomeMap extends React.Component {
     courseMarkerHelperMethod = (course) => {
         const courseCoords = [course.courseLat, course.courseLong]
         return (
-            <Marker position={courseCoords} >
-                <Popup>
-                    <p>DGCourse Review Rating:</p><img src={course.dgRatingImg}></img>
+            <Marker position={courseCoords} key={course.name}>
+                <Popup key={course.name}>
+                    <p>DGCourse Review Rating:</p><img src={course.dgRatingImg} alt={course.name}></img>
                     <h1>{course.name}</h1>
                     <p>{course.street} {course.city} {course.state}, {course.zip}</p>
                     <p>Holes: {course.holes}</p>
-                    <a href={course.dgCourseLink} target="_blank">For More Details Click Here</a>
+                    <a href={course.dgCourseLink} target="_blank" rel="noopener noreferrer">For More Details Click Here</a>
                 </Popup>
             </Marker>
         )

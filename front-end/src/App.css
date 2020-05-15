@@ -49,7 +49,7 @@
 background-image: url("./images/WelcomeImg.jpg");
 background-repeat: no-repeat;
 background-position: center;
-background-size: 1600px 900px;
+background-size: 100% 100%;
 border-radius: 10px;
 }
 
@@ -89,7 +89,7 @@ background-color: lightgray;
 .playerCard{
   box-shadow: 2px 2px 11px black;
   margin-top: 50px;
-  background-color: white;
+  background-image: url("./images/GrassBackground.jpeg");
   height: 100%;
   display: flex;
   padding-top: 20px;
@@ -102,13 +102,17 @@ background-color: lightgray;
 
 .playerCardPicture{
   width: 50%;
+  text-align: center;
 
 }
 
 .playerCardDetails{
-  border-top: 2px solid limegreen;
-  border-left: 2px solid limegreen;
-  border-bottom: 2px solid limegreen;
+  background-color: white;
+  border-top: 6px dotted yellow;
+  border-left:6px dotted yellow; 
+  border-bottom: 6px dotted yellow;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   padding-left: 5px;
   padding-top: 5px;
   width: 20%;
@@ -116,9 +120,12 @@ background-color: lightgray;
 
 
 .playerCardAddress{
-  border-top: 2px solid limegreen;
-  border-right: 2px solid limegreen;
-  border-bottom: 2px solid limegreen;
+  background-color:white;
+  border-top: 6px dotted yellow;
+  border-right:6px dotted yellow; 
+  border-bottom: 6px dotted yellow;;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   padding-top: 5px;
   width: 25%;
 }
@@ -127,15 +134,18 @@ background-color: lightgray;
   border-radius: 5px;
   margin-left: 5px;
   margin-bottom: 5px;
+  height: 200px;
 }
 
 .mapFilterContainer{
   width: 40%;
   margin-top: 50px;
-  background-color: white;
+  background-image: url("./images/GrassBackground.jpeg");
   border-radius: 10px;
   margin-bottom: 50px;
   box-shadow: 2px 2px 11px black;
+  color:yellow;
+  font-weight: bold;
 }
 
 .leaflet-container {
@@ -156,5 +166,13 @@ background-color: lightgray;
 #mapFilerHeader{
   text-align: center;
 }
+
+.homeFooter{
+text-align: right;
+padding-right: 5px;
+}
   
+.homeEditBtn{
+
+}
 

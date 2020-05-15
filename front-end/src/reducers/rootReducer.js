@@ -1,9 +1,5 @@
 import { combineReducers } from "redux"
 
-
-
-
-
 const rootReducer = combineReducers({
     users: usersReducer,
     courses: coursesReducer
@@ -15,10 +11,13 @@ function usersReducer(state = [], action) {
     switch (action.type) {
         case "USER_LOGIN":
             console.log("Reducer:", action.user)
-            return [...state, action.user]
+            debugger
+            return [...state, action.user.user]
         case "USER_LOGOUT":
             state = []
             return state
+        case "USER_UPDATE":
+            return [action.user]
         default:
             return state;
     }

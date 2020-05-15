@@ -1,5 +1,6 @@
 import React from "react"
 import MapSearch from "../forms/MapSearch"
+import { Button } from 'semantic-ui-react'
 
 
 
@@ -9,6 +10,7 @@ const PlayerCard = (props) => {
             <div className="playerCard">
                 <div className="playerCardPicture">
                     <img src={props.user.userImg} id="playerImg" alt={props.user.firstName}></img>
+                    <Button content='Update PlayerCard' icon='address card' labelPosition='left' onClick={props.handleEditPCClick} color="yellow" />
                 </div>
                 <div className="playerCardDetails">
                     <h3>Personal Info</h3>
