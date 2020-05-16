@@ -13,14 +13,14 @@ const PlayerCard = (props) => {
                     <Button content='Update PlayerCard' icon='address card' labelPosition='left' onClick={props.handleEditPCClick} color="yellow" />
                 </div>
                 <div className="playerCardDetails">
-                    <h3>Personal Info</h3>
+                    <h3 id="playerCardHeader">Personal Info</h3>
                     <p>Email: {props.user.email}</p>
                     <p>First Name: {props.user.firstName} </p>
                     <p>Last Name: {props.user.lastName} </p>
                     <p>Games Played: 0</p>
                 </div>
                 <div className="playerCardAddress">
-                    <h3>Address</h3>
+                    <h3 id="playerCardHeader">Address</h3>
                     <p>Street: {props.user.street}</p>
                     <p>City: {props.user.city}</p>
                     <p>State: {props.user.state}</p>

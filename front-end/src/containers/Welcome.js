@@ -4,15 +4,18 @@ import Login from "../forms/Login";
 import { connect } from "react-redux"
 import { userLogin } from "../actions/userActions"
 import { userLogout } from "../actions/userActions"
+import { userSignUp } from "../actions/userActions"
 import Header from "../containers/Header"
 import { Redirect } from "react-router-dom";
+import SignUpModal from "./SignUpModal";
 
 
 class Welcome extends React.Component {
     constructor() {
         super()
         this.state = {
-            showLoginError: false
+            showLoginError: false,
+            renderSignUpForm: false
         }
     }
 
@@ -58,16 +61,79 @@ class Welcome extends React.Component {
             })
     }
 
+
+    //Handles Sign Up Click
+    handleSignUpClick = () => {
+        this.setState({ renderSignUpForm: true })
+    }
+
+    //Handles Close btn on Sign Up Modal
+    handleSignUpCloseBtn = () => {
+        this.setState({ renderSignUpForm: false })
+    }
+
+    //Handles Submit btn on Sign Up Modal
+    handleSignUpSubmit = (event) => {
+        event.preventDefault()
+        const newUser = this.createNewUserFromSignUp(event)
+        fetch('http://localhost:3000/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newUser),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                debugger
+                this.props.userSignUp(data)
+            })
+    }
+
+    //Helper Method to Create New User from Sign Up
+    createNewUserFromSignUp = (event) => {
+        const userEmail = event.target.querySelector("#email").value
+        const userPass = event.target.querySelector("#passwordInput").value
+        const userImg = event.target.querySelector("#userImg").value
+        const userFName = event.target.querySelector("#firstName").value
+        const userLName = event.target.querySelector("#lastName").value
+        const userStreet = event.target.querySelector("#street").value
+        const userCity = event.target.querySelector("#city").value
+        const userState = event.target.querySelector("#state").value
+        const userZip = event.target.querySelector("#zip").value
+        const newUser = {
+            email: userEmail,
+            password: userPass,
+            firstName: userFName,
+            lastName: userLName,
+            street: userStreet,
+            city: userCity,
+            state: userState,
+            zip: userZip,
+            userImg: userImg
+        }
+        return newUser
+    }
+
     render() {
-        console.log("Current User:", this.props.user.length)
         if (this.props.user.length > 0) {
             return <Redirect to="/Account_Home" />
         }
         return (
             <div className="welcomeBodyContainer">
                 <Header handleLogOutClick={this.handleLogOutClick} />
+                <SignUpModal
+                    renderSignUpForm={this.state.renderSignUpForm}
+                    handleSignUpCloseBtn={this.handleSignUpCloseBtn}
+                    handleSignUpSubmit={this.handleSignUpSubmit}
+                />
                 <Container>
-                    <Login handleLoginSubmit={this.handleLoginSubmit} showLoginError={this.state.showLoginError} />
+                    <Login
+                        handleLoginSubmit={this.handleLoginSubmit}
+                        showLoginError={this.state.showLoginError}
+                        handleSignUpClick={this.handleSignUpClick}
+                    />
                 </Container>
                 <div id="DGAAMotto">
                     <img src={require("../images/DGAAMoto.png")} alt="DGAA Motto"></img>
@@ -80,7 +146,8 @@ class Welcome extends React.Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         userLogin: (userData) => dispatch(userLogin(userData)),
-        userLogout: (userData) => dispatch(userLogout(userData))
+        userLogout: (userData) => dispatch(userLogout(userData)),
+        userSignUp: (userData) => dispatch(userSignUp(userData))
     }
 }
 

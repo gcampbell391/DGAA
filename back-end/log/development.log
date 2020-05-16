@@ -10200,3 +10200,711 @@ Processing by UsersController#update as */*
 Completed 200 OK in 589ms (Views: 15.1ms | ActiveRecord: 34.0ms | Allocations: 3136791)
 
 
+Started POST "/login" for ::1 at 2020-05-15 18:10:39 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 258ms (Views: 2.7ms | ActiveRecord: 3.4ms | Allocations: 13402)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:10:43 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (3.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 155ms (Views: 148.9ms | ActiveRecord: 4.1ms | Allocations: 30415)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:30:10 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 222ms (Views: 3.7ms | ActiveRecord: 1.3ms | Allocations: 946)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:30:52 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 213ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 675)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:30:57 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 211ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 921)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:31:35 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 218ms (Views: 3.6ms | ActiveRecord: 1.6ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:31:36 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (2.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 84ms (Views: 78.5ms | ActiveRecord: 2.6ms | Allocations: 20152)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:31:41 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 32ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1870)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:31:41 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (3.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 153ms (Views: 150.0ms | ActiveRecord: 3.1ms | Allocations: 20117)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:33:09 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 235ms (Views: 9.8ms | ActiveRecord: 1.3ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:33:11 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (109.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 131ms (Views: 20.6ms | ActiveRecord: 109.4ms | Allocations: 20120)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:33:13 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:33:13 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:35:54 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 227ms (Views: 2.7ms | ActiveRecord: 1.3ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:35:55 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 92ms (Views: 89.6ms | ActiveRecord: 1.2ms | Allocations: 20118)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:36:22 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 210ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:36:22 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.4ms | Allocations: 20117)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:36:24 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:36:24 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.6ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:44:33 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 217ms (Views: 4.3ms | ActiveRecord: 1.2ms | Allocations: 935)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:44:33 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (2.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 2.5ms | Allocations: 20152)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:44:35 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:44:35 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.7ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.7ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:45:07 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 214ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:45:07 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 1.2ms | Allocations: 20115)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:45:10 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:45:10 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.9ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.9ms | Allocations: 20115)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:45:12 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:45:12 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.7ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 71ms (Views: 70.5ms | ActiveRecord: 0.7ms | Allocations: 20118)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:45:13 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:45:43 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:47:29 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 216ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:47:29 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.8ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.8ms | Allocations: 20115)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:47:31 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:47:31 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:47:39 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 210ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:47:40 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:47:51 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:47:51 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:48:01 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 213ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:48:01 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:48:23 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:48:23 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.9ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.9ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:48:35 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 215ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:48:35 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (38.9ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 56ms (Views: 16.5ms | ActiveRecord: 38.9ms | Allocations: 20118)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:48:43 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.6ms | Allocations: 20115)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:48:44 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:48:44 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:49:31 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 211ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:49:31 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 1.1ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:53:55 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 218ms (Views: 2.7ms | ActiveRecord: 0.9ms | Allocations: 905)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:54:28 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 211ms (Views: 0.7ms | ActiveRecord: 0.8ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:54:28 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.0ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 1.0ms | Allocations: 20115)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:54:56 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:54:59 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 1.4ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:58:54 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 217ms (Views: 3.0ms | ActiveRecord: 0.8ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:58:55 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.0ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 1.0ms | Allocations: 20118)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:58:57 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:58:57 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.6ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-15 18:59:03 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 211ms (Views: 0.6ms | ActiveRecord: 1.1ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:59:03 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.7ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.7ms | Allocations: 20115)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:59:05 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:59:07 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.8ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.8ms | Allocations: 20115)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:59:09 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.6ms | Allocations: 20115)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 18:59:10 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 18:59:10 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.4ms | Allocations: 20115)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 19:04:44 -0400
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#logout as */*
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started POST "/login" for ::1 at 2020-05-15 19:49:40 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 224ms (Views: 5.7ms | ActiveRecord: 2.1ms | Allocations: 936)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 19:49:40 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (2.8ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 2.8ms | Allocations: 20152)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 19:55:47 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.9ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 1.9ms | Allocations: 20153)
+
+
+Started POST "/login" for ::1 at 2020-05-15 20:16:22 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 427ms (Views: 9.2ms | ActiveRecord: 3.5ms | Allocations: 935)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 20:16:23 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 136ms (Views: 133.4ms | ActiveRecord: 1.6ms | Allocations: 20152)
+
+
+Started POST "/login" for ::1 at 2020-05-15 20:20:46 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 235ms (Views: 6.8ms | ActiveRecord: 3.0ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 20:20:47 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (10.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 116ms (Views: 105.2ms | ActiveRecord: 10.2ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-15 20:22:22 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 232ms (Views: 5.7ms | ActiveRecord: 1.8ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 20:22:22 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 82ms (Views: 79.9ms | ActiveRecord: 1.6ms | Allocations: 20115)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 20:23:00 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 20:23:00 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (5.3ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 64ms (Views: 58.3ms | ActiveRecord: 5.3ms | Allocations: 20115)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 20:23:00 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 20:23:00 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (2.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 198ms (Views: 194.8ms | ActiveRecord: 2.5ms | Allocations: 20118)
+
+
+Started POST "/users" for ::1 at 2020-05-15 20:47:42 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"daveYourFav@gmail.com", "password"=>"[FILTERED]", "firstName"=>"Dave", "lastName"=>"Dingo", "street"=>"78 Great Ave", "city"=>"Waterport", "state"=>"NY", "zip"=>"14571", "userImg"=>"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSExMWFhUXFxgYGBgYFxcXFxcbHRcdHRobHhgYHyggGh0lHRgYIjEhJSkrLi4uGh8zODMtNygtLisBCgoKDg0OGhAQGy0lHyUtLS0tLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAQMAwgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAQIDBAYABwj/xABEEAABAwIEAwYFAgQFAgMJAAABAAIRAyEEEjFBBVFhBhMicYGRMqGxwfBC0SNS4fEHFBViooKSFrLiJDM0Q1Nzo8LS/8QAGgEAAgMBAQAAAAAAAAAAAAAAAQMAAgQFBv/EACgRAAICAQQCAgICAwEAAAAAAAABAhEDBBIhMUFRE2EiMiNxM1KBFP/aAAwDAQACEQMRAD8A8+xHBQ4uLbE6bCVQxXDTTu4gi09PzmjmBqPeCHAtIgTGtutvsquLwjiYNQlpmbCfQAaXA81qnijVpGeMndMEjAh8llgPUHoTsnjCA+KcpAnLEbenKVPhME0EBxNzLRcGwubdPorGFpCpORxEgg3JPIXKV8dl9wK4h4QymDMNBPLM7xT1MOaPRVWUdTrYEx1IH3WgqYFoLnOzS2CXbGWx8uSrtqNDXQwd5IpiPDrMSD5apbxtLkvvTA1RrSfADG0mTO+gG6SthzE8h5HUq+KLqdcARIP6tOvpKrY6Z8UTJJjS8H7qjVBTKEKSnTcZF+o0V7g7GB/jGYG0eeh90bfgszX5aYGUDIR4YOYBwA/UYv6FGvxsl80CMMWtFnRv4gR6fOJnZPZhnO8ROVmYHNGvkCL/AE81axVBrG+Iy8g9YuRPyiCko4gyKZLskEi0m7d7/CLm33UglZWTK1aqXABpcyQc4zWPQxqNbFdhsOHuayY0knQkC4j2UWIfJdFgBYb/AGBRHhFEOaS4G", "user"=>{"email"=>"daveYourFav@gmail.com", "firstName"=>"Dave", "lastName"=>"Dingo", "street"=>"78 Great Ave", "city"=>"Waterport", "state"=>"NY", "zip"=>"14571", "userImg"=>"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSExMWFhUXFxgYGBgYFxcXFxcbHRcdHRobHhgYHyggGh0lHRgYIjEhJSkrLi4uGh8zODMtNygtLisBCgoKDg0OGhAQGy0lHyUtLS0tLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAQMAwgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAQIDBAYABwj/xABEEAABAwIEAwYFAgQFAgMJAAABAAIRAyEEEjFBBVFhBhMicYGRMqGxwfBC0SNS4fEHFBViooKSFrLiJDM0Q1Nzo8LS/8QAGgEAAgMBAQAAAAAAAAAAAAAAAQMAAgQFBv/EACgRAAICAQQCAgICAwEAAAAAAAABAhEDBBIhMUFRE2EiMiNxM1KBFP/aAAwDAQACEQMRAD8A8+xHBQ4uLbE6bCVQxXDTTu4gi09PzmjmBqPeCHAtIgTGtutvsquLwjiYNQlpmbCfQAaXA81qnijVpGeMndMEjAh8llgPUHoTsnjCA+KcpAnLEbenKVPhME0EBxNzLRcGwubdPorGFpCpORxEgg3JPIXKV8dl9wK4h4QymDMNBPLM7xT1MOaPRVWUdTrYEx1IH3WgqYFoLnOzS2CXbGWx8uSrtqNDXQwd5IpiPDrMSD5apbxtLkvvTA1RrSfADG0mTO+gG6SthzE8h5HUq+KLqdcARIP6tOvpKrY6Z8UTJJjS8H7qjVBTKEKSnTcZF+o0V7g7GB/jGYG0eeh90bfgszX5aYGUDIR4YOYBwA/UYv6FGvxsl80CMMWtFnRv4gR6fOJnZPZhnO8ROVmYHNGvkCL/AE81axVBrG+Iy8g9YuRPyiCko4gyKZLskEi0m7d7/CLm33UglZWTK1aqXABpcyQc4zWPQxqNbFdhsOHuayY0knQkC4j2UWIfJdFgBYb/AGBRHhFEOaS4G"}}
+Completed 500 Internal Server Error in 31119ms (ActiveRecord: 1.0ms | Allocations: 51646)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:12:in `create'
+Started GET "/dg_courses" for ::1 at 2020-05-15 20:49:43 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (3.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 607ms (Views: 584.0ms | ActiveRecord: 7.7ms | Allocations: 7175287)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 20:49:48 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 56984)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 20:49:48 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (4.0ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 583ms (Views: 576.3ms | ActiveRecord: 4.0ms | Allocations: 6606683)
+
+
+Started POST "/users" for ::1 at 2020-05-15 20:50:33 -0400
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"daveYourFav@gmail.com", "password"=>"[FILTERED]", "firstName"=>"Dave", "lastName"=>"Dingo", "street"=>"78 Great Ave", "city"=>"Waterport", "state"=>"NY", "zip"=>"14571", "userImg"=>"data:image/jpeg;base64,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", "user"=>{"email"=>"daveYourFav@gmail.com", "firstName"=>"Dave", "lastName"=>"Dingo", "street"=>"78 Great Ave", "city"=>"Waterport", "state"=>"NY", "zip"=>"14571", "userImg"=>"data:image/jpeg;base64,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"}}
+Completed 500 Internal Server Error in 14433ms (ActiveRecord: 0.0ms | Allocations: 168713)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:12:in `create'
+Started GET "/dg_courses" for ::1 at 2020-05-15 20:50:53 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (11.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 656ms (Views: 642.0ms | ActiveRecord: 11.4ms | Allocations: 7951252)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 20:51:29 -0400
+Started GET "/dg_courses" for ::1 at 2020-05-15 20:51:31 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#logout as */*
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 71781)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 20:51:32 -0400
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (9.0ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+Processing by SessionsController#logout as */*
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 68692)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 20:51:33 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 1163ms (Views: 1124.7ms | ActiveRecord: 24.0ms | Allocations: 12109867)
+
+
+Completed 200 OK in 15ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 64053)
+
+
+Started GET "/users" for ::1 at 2020-05-15 20:51:38 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 278ms (Views: 161.8ms | ActiveRecord: 14.8ms | Allocations: 2902854)
+
+
+Started POST "/users" for ::1 at 2020-05-15 20:52:01 -0400
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"daveYourFav@gmail.com", "password"=>"[FILTERED]", "firstName"=>"Dave", "lastName"=>"Dingo", "street"=>"78 Great Ave", "city"=>"Waterport", "state"=>"NY", "zip"=>"14571", "userImg"=>"data:image/jpeg;base64,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", "user"=>{"email"=>"daveYourFav@gmail.com", "firstName"=>"Dave", "lastName"=>"Dingo", "street"=>"78 Great Ave", "city"=>"Waterport", "state"=>"NY", "zip"=>"14571", "userImg"=>"data:image/jpeg;base64,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"}}
+Completed 500 Internal Server Error in 4149ms (ActiveRecord: 0.0ms | Allocations: 210714)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:12:in `create'
+Started GET "/dg_courses" for ::1 at 2020-05-15 20:57:53 -0400
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (9.7ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 809ms (Views: 795.6ms | ActiveRecord: 9.7ms | Allocations: 9372030)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 20:57:55 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 64056)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 20:57:55 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (12.9ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 895ms (Views: 878.7ms | ActiveRecord: 12.9ms | Allocations: 9365212)
+
+
+Started GET "/users" for ::1 at 2020-05-15 20:58:02 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 57ms (Views: 43.2ms | ActiveRecord: 10.4ms | Allocations: 364642)
+
+
+Started POST "/login" for ::1 at 2020-05-15 20:58:45 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 510ms (Views: 13.1ms | ActiveRecord: 12.5ms | Allocations: 3050758)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 20:58:47 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (4.9ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 1082ms (Views: 1050.9ms | ActiveRecord: 10.5ms | Allocations: 11364457)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 20:58:54 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 9ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 64058)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 20:58:54 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (11.7ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 956ms (Views: 940.8ms | ActiveRecord: 11.7ms | Allocations: 9334518)
+
+

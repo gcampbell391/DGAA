@@ -7,6 +7,7 @@ import PlayerCard from "../components/PlayerCard"
 import Footer from "../components/Footer"
 import AccountHomeMap from "../components/AccountHomeMap"
 import EditPCModal from "./EditPCModal"
+import history from "../history"
 
 
 class Home extends React.Component {
@@ -33,6 +34,7 @@ class Home extends React.Component {
                 console.log(data)
                 this.setState({ currentUser: null })
                 this.props.userLogout(this.props.user)
+                history.push("/")
             })
     }
 

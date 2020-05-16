@@ -144,8 +144,18 @@ background-color: lightgray;
   border-radius: 10px;
   margin-bottom: 50px;
   box-shadow: 2px 2px 11px black;
+}
+
+#mapFilerHeader{
   color:yellow;
   font-weight: bold;
+  text-shadow: 2px 2px black;
+}
+
+#playerCardHeader{
+  color:black;
+  font-weight: bold;
+  text-shadow: 2px 2px yellow;
 }
 
 .leaflet-container {

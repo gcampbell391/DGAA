@@ -39,7 +39,7 @@ const Login = (props) => (
                 <Message>
                     {props.showLoginError ? <p id="loginAlert">Invalid Login Attempt..Please try again</p>
                         :
-                        <p id="loginSignUpTag">Not registered yet? <a href="/SomeLink">Sign Up Today</a></p>
+                        <p id="loginSignUpTag">Not registered yet? <Button color="yellow" onClick={props.handleSignUpClick}>Sign Up Today</Button></p>
                     }
 
                 </Message>

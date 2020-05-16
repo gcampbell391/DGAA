@@ -5,6 +5,25 @@ class UsersController < ApplicationController
         render json: users
     end
 
+    def create 
+        @user = User.new(user_params)
+        @user.password_digest = BCrypt::Password.create(params["password"])
+        byebug
+        ###Throws error
+        if @user.valid?
+            @user.save
+            byebug
+            session[:user_id] = @user.id
+            render json: {
+                status: :created,
+                logged_in: true,
+                user: @user
+            }
+        else
+            render json: { status: 401 }
+        end
+    end
+
     def update 
         @user = User.find_by(id: params[:id])
         @user.update(user_params)
