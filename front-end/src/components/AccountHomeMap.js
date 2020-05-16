@@ -1,7 +1,10 @@
 import React from 'react'
 import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
-import Leaflet from 'leaflet'
+import { Button } from 'semantic-ui-react';
 import Geocode from "react-geocode";
+import { connect } from "react-redux"
+import { addCourseDetails } from "../actions/courseActions"
+import { addCoursePictures } from "../actions/courseActions"
 
 
 class AccountHomeMap extends React.Component {
@@ -28,6 +31,7 @@ class AccountHomeMap extends React.Component {
         );
     }
 
+    //Fetches courses from back end
     fetchCourses = () => {
         fetch("http://localhost:3000/dg_courses")
             .then(resp => resp.json())
@@ -36,6 +40,7 @@ class AccountHomeMap extends React.Component {
             })
     }
 
+    //Creates Markers for all courses
     createCourseMarkers = (course) => {
         if (course.name.toLowerCase().includes(this.props.mapNameSearchTerm)) {
             if (course.city.toLowerCase().includes(this.props.mapCitySearchTerm)) {
@@ -44,17 +49,9 @@ class AccountHomeMap extends React.Component {
         }
     }
 
+    //Helper method to create details for course markers
     courseMarkerHelperMethod = (course) => {
         const courseCoords = [course.courseLat, course.courseLong]
-        // const customMark = Leaflet.Icon({
-        //     iconUrl: require('../images/BasketIcon.png'),
-        //     shadowUrl: require('../images/BasketIcon.png'),
-        //     iconSize: [38, 95], // size of the icon
-        //     shadowSize: [50, 64], // size of the shadow
-        //     iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-        //     shadowAnchor: [4, 62],  // the same for the shadow
-        //     popupAnchor: [-3, -76]// point from which the popup should open relative to the iconAnchor
-        // }) icon={customMark} to marker
         return (
             <Marker position={courseCoords} key={course.name} >
                 <Popup key={course.name}>
@@ -63,9 +60,50 @@ class AccountHomeMap extends React.Component {
                     <p>{course.street} {course.city} {course.state}, {course.zip}</p>
                     <p>Holes: {course.holes}</p>
                     <a href={course.dgCourseLink} target="_blank" rel="noopener noreferrer">For More Details Click Here</a>
+                    <Button content='Start New Round' icon='child' labelPosition='center' color='yellow' onClick={() => this.handleStartRoundOnCourse(course)} />
                 </Popup>
             </Marker>
         )
+    }
+
+    //Handles Start Round functionality
+    handleStartRoundOnCourse = (course) => {
+        console.log("Course Clicked: ", course)
+        this.fetchCourseDetails(course)
+        this.fetchCoursePictures(course)
+    }
+
+    //Helper Method to fetch course details with hole information
+    fetchCourseDetails = (course) => {
+        const courseID = course.DGCourseReviewApiId
+        const md5 = require('md5');
+        const proxyurl = "https://cors-anywhere.herokuapp.com/";
+        const api_key = `${process.env.REACT_APP_DG_API_KEY}`
+        const sig_key = `${process.env.REACT_APP_DG_SIG_KEY}`
+        const sig = md5(`${api_key}${sig_key}holeinfo`)
+        const fetchUrl = `https://www.dgcoursereview.com/api_test/?key=${api_key}&mode=holeinfo&id=${courseID}&sig=${sig}`
+        return fetch(proxyurl + fetchUrl)
+            .then(resp => resp.json())
+            .then(data => {
+                this.props.addCourseDetails(data)
+            })
+    }
+
+    //Helper Method to fetch course pictures
+    fetchCoursePictures = (course) => {
+        const courseID = course.DGCourseReviewApiId
+        const md5 = require('md5');
+        const proxyurl = "https://cors-anywhere.herokuapp.com/";
+        const api_key = `${process.env.REACT_APP_DG_API_KEY}`
+        const sig_key = `${process.env.REACT_APP_DG_SIG_KEY}`
+        const sig = md5(`${api_key}${sig_key}crsephto`)
+        const fetchUrl = `https://www.dgcoursereview.com/api_test/?key=${api_key}&mode=crsephto&id=${courseID}&sig=${sig}`
+        return fetch(proxyurl + fetchUrl)
+            .then(resp => resp.json())
+            .then(data => {
+                console.log("Course Pictures:", data)
+                this.props.addCoursePictures(data)
+            })
     }
 
     render() {
@@ -102,6 +140,14 @@ class AccountHomeMap extends React.Component {
     }
 }
 
-export default AccountHomeMap
+
+const mapDispatchToProps = dispatch => {
+    return {
+        addCourseDetails: (courseDetails) => { dispatch(addCourseDetails(courseDetails)) },
+        addCoursePictures: (coursePictures) => { dispatch(addCoursePictures(coursePictures)) }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(AccountHomeMap)
 
 

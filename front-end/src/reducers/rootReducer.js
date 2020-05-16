@@ -26,6 +26,11 @@ function usersReducer(state = [], action) {
 
 function coursesReducer(state = [], action) {
     switch (action.type) {
+        case "ADD_COURSE_DETAILS":
+            return [action.course]
+        case "ADD_COURSE_PICTURES":
+            debugger
+            return [...state, action.course]
         default:
             return state
     }

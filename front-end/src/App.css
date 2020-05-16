@@ -25,7 +25,7 @@
 }
 
 .LoginFormContainer{
-  margin-top: 400px;
+  margin-top: 320px;
   
 }
 
@@ -177,4 +177,8 @@ background-color: lightgray;
 .homeFooter{
 text-align: right;
 padding-right: 5px;
+}
+
+.startGameBtn{
+  margin-top: 20px;
 }
