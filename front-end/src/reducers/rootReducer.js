@@ -18,8 +18,7 @@ function usersReducer(state = [], action) {
         case "USER_UPDATE":
             return [action.user]
         case "USER_SIGNUP":
-            debugger
-            return [action.user]
+            return [action.user.user]
         default:
             return state;
     }

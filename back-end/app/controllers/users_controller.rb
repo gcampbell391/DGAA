@@ -8,11 +8,8 @@ class UsersController < ApplicationController
     def create 
         @user = User.new(user_params)
         @user.password_digest = BCrypt::Password.create(params["password"])
-        byebug
-        ###Throws error
         if @user.valid?
             @user.save
-            byebug
             session[:user_id] = @user.id
             render json: {
                 status: :created,

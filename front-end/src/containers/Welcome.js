@@ -86,8 +86,8 @@ class Welcome extends React.Component {
             .then(response => response.json())
             .then(data => {
                 console.log(data)
-                debugger
                 this.props.userSignUp(data)
+                this.setState({ renderSignUpForm: false })
             })
     }
 

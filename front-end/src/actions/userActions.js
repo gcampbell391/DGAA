@@ -26,7 +26,6 @@ export const userUpdate = user => {
 }
 
 export const userSignUp = user => {
-    debugger
     return (dispatch => {
         dispatch({
             type: "USER_SIGNUP",

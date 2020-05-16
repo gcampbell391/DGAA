@@ -10908,3 +10908,222 @@ Processing by DgCoursesController#index as */*
 Completed 200 OK in 956ms (Views: 940.8ms | ActiveRecord: 11.7ms | Allocations: 9334518)
 
 
+Started POST "/users" for ::1 at 2020-05-15 21:52:26 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"daveYourFav@gmail.com", "password"=>"[FILTERED]", "firstName"=>"Dave", "lastName"=>"Dingo", "street"=>"78 Great Ave", "city"=>"Waterport", "state"=>"NY", "zip"=>"14571", "userImg"=>"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSExMWFhUXFxgYGBgYFxcXFxcbHRcdHRobHhgYHyggGh0lHRgYIjEhJSkrLi4uGh8zODMtNygtLisBCgoKDg0OGhAQGy0lHyUtLS0tLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAQMAwgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAQIDBAYABwj/xABEEAABAwIEAwYFAgQFAgMJAAABAAIRAyEEEjFBBVFhBhMicYGRMqGxwfBC0SNS4fEHFBViooKSFrLiJDM0Q1Nzo8LS/8QAGgEAAgMBAQAAAAAAAAAAAAAAAQMAAgQFBv/EACgRAAICAQQCAgICAwEAAAAAAAABAhEDBBIhMUFRE2EiMiNxM1KBFP/aAAwDAQACEQMRAD8A8+xHBQ4uLbE6bCVQxXDTTu4gi09PzmjmBqPeCHAtIgTGtutvsquLwjiYNQlpmbCfQAaXA81qnijVpGeMndMEjAh8llgPUHoTsnjCA+KcpAnLEbenKVPhME0EBxNzLRcGwubdPorGFpCpORxEgg3JPIXKV8dl9wK4h4QymDMNBPLM7xT1MOaPRVWUdTrYEx1IH3WgqYFoLnOzS2CXbGWx8uSrtqNDXQwd5IpiPDrMSD5apbxtLkvvTA1RrSfADG0mTO+gG6SthzE8h5HUq+KLqdcARIP6tOvpKrY6Z8UTJJjS8H7qjVBTKEKSnTcZF+o0V7g7GB/jGYG0eeh90bfgszX5aYGUDIR4YOYBwA/UYv6FGvxsl80CMMWtFnRv4gR6fOJnZPZhnO8ROVmYHNGvkCL/AE81axVBrG+Iy8g9YuRPyiCko4gyKZLskEi0m7d7/CLm33UglZWTK1aqXABpcyQc4zWPQxqNbFdhsOHuayY0knQkC4j2UWIfJdFgBYb/AGBRHhFEOaS4G", "user"=>{"email"=>"daveYourFav@gmail.com", "firstName"=>"Dave", "lastName"=>"Dingo", "street"=>"78 Great Ave", "city"=>"Waterport", "state"=>"NY", "zip"=>"14571", "userImg"=>"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSExMWFhUXFxgYGBgYFxcXFxcbHRcdHRobHhgYHyggGh0lHRgYIjEhJSkrLi4uGh8zODMtNygtLisBCgoKDg0OGhAQGy0lHyUtLS0tLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAQMAwgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAQIDBAYABwj/xABEEAABAwIEAwYFAgQFAgMJAAABAAIRAyEEEjFBBVFhBhMicYGRMqGxwfBC0SNS4fEHFBViooKSFrLiJDM0Q1Nzo8LS/8QAGgEAAgMBAQAAAAAAAAAAAAAAAQMAAgQFBv/EACgRAAICAQQCAgICAwEAAAAAAAABAhEDBBIhMUFRE2EiMiNxM1KBFP/aAAwDAQACEQMRAD8A8+xHBQ4uLbE6bCVQxXDTTu4gi09PzmjmBqPeCHAtIgTGtutvsquLwjiYNQlpmbCfQAaXA81qnijVpGeMndMEjAh8llgPUHoTsnjCA+KcpAnLEbenKVPhME0EBxNzLRcGwubdPorGFpCpORxEgg3JPIXKV8dl9wK4h4QymDMNBPLM7xT1MOaPRVWUdTrYEx1IH3WgqYFoLnOzS2CXbGWx8uSrtqNDXQwd5IpiPDrMSD5apbxtLkvvTA1RrSfADG0mTO+gG6SthzE8h5HUq+KLqdcARIP6tOvpKrY6Z8UTJJjS8H7qjVBTKEKSnTcZF+o0V7g7GB/jGYG0eeh90bfgszX5aYGUDIR4YOYBwA/UYv6FGvxsl80CMMWtFnRv4gR6fOJnZPZhnO8ROVmYHNGvkCL/AE81axVBrG+Iy8g9YuRPyiCko4gyKZLskEi0m7d7/CLm33UglZWTK1aqXABpcyQc4zWPQxqNbFdhsOHuayY0knQkC4j2UWIfJdFgBYb/AGBRHhFEOaS4G"}}
+  [1m[36mUser Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "daveYourFav@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "daveYourFav@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[36mUser Create (4.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "firstName", "lastName", "street", "city", "state", "zip", "userImg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "daveYourFav@gmail.com"], ["password_digest", "$2a$12$YOwfENmbQw61cGTHKEWNzuNvJc51XnqdK5EsRh.VFaA7dgbj8ka8e"], ["firstName", "Dave"], ["lastName", "Dingo"], ["street", "78 Great Ave"], ["city", "Waterport"], ["state", "NY"], ["zip", 14571], ["userImg", "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSExMWFhUXFxgYGBgYFxcXFxcbHRcdHRobHhgYHyggGh0lHRgYIjEhJSkrLi4uGh8zODMtNygtLisBCgoKDg0OGhAQGy0lHyUtLS0tLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAQMAwgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAQIDBAYABwj/xABEEAABAwIEAwYFAgQFAgMJAAABAAIRAyEEEjFBBVFhBhMicYGRMqGxwfBC0SNS4fEHFBViooKSFrLiJDM0Q1Nzo8LS/8QAGgEAAgMBAQAAAAAAAAAAAAAAAQMAAgQFBv/EACgRAAICAQQCAgICAwEAAAAAAAABAhEDBBIhMUFRE2EiMiNxM1KBFP/aAAwDAQACEQMRAD8A8+xHBQ4uLbE6bCVQxXDTTu4gi09PzmjmBqPeCHAtIgTGtutvsquLwjiYNQlpmbCfQAaXA81qnijVpGeMndMEjAh8llgPUHoTsnjCA+KcpAnLEbenKVPhME0EBxNzLRcGwubdPorGFpCpORxEgg3JPIXKV8dl9wK4h4QymDMNBPLM7xT1MOaPRVWUdTrYEx1IH3WgqYFoLnOzS2CXbGWx8uSrtqNDXQwd5IpiPDrMSD5apbxtLkvvTA1RrSfADG0mTO+gG6SthzE8h5HUq+KLqdcARIP6tOvpKrY6Z8UTJJjS8H7qjVBTKEKSnTcZF+o0V7g7GB/jGYG0eeh90bfgszX5aYGUDIR4YOYBwA/UYv6FGvxsl80CMMWtFnRv4gR6fOJnZPZhnO8ROVmYHNGvkCL/AE81axVBrG+Iy8g9YuRPyiCko4gyKZLskEi0m7d7/CLm33UglZWTK1aqXABpcyQc4zWPQxqNbFdhsOHuayY0knQkC4j2UWIfJdFgBYb/AGBRHhFEOaS4G"], ["created_at", "2020-05-16 01:55:29.580271"], ["updated_at", "2020-05-16 01:55:29.580271"]]
+  ↳ app/controllers/users_controller.rb:14:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:14:in `create'
+Completed 200 OK in 224115ms (Views: 1.3ms | ActiveRecord: 8.1ms | Allocations: 62744)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 22:00:11 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (44.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 226ms (Views: 164.1ms | ActiveRecord: 50.9ms | Allocations: 30923)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:00:25 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"daveYourFave@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"daveYourFave@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "daveYourFave@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 4144)
+
+
+Started GET "/users" for ::1 at 2020-05-15 22:00:30 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.8ms | Allocations: 8588)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:00:43 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"daveYourFav@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"daveYourFav@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "daveYourFav@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 213ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 903)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 22:00:44 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.0ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 1.0ms | Allocations: 20115)
+
+
+Started PATCH "/users/2" for ::1 at 2020-05-15 22:05:30 -0400
+Processing by UsersController#update as */*
+  Parameters: {"id"=>"2", "email"=>"daveYourFav@gmail.com", "password_digest"=>"[FILTERED]", "firstName"=>"Dave", "lastName"=>"Dingo", "street"=>"78 Great Ave", "city"=>"Waterport", "state"=>"NY", "zip"=>14571, "userImg"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSTFRO8pE5lHUrvDzvalwi8xT_rMt7oa1FSGuK_e5yCdOtpfTvT&usqp=CAU", "created_at"=>"2020-05-16T01:55:29.580Z", "updated_at"=>"2020-05-16T01:55:29.580Z", "password"=>"[FILTERED]", "user"=>{"id"=>"2", "email"=>"daveYourFav@gmail.com", "password_digest"=>"[FILTERED]", "firstName"=>"Dave", "lastName"=>"Dingo", "street"=>"78 Great Ave", "city"=>"Waterport", "state"=>"NY", "zip"=>14571, "userImg"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSTFRO8pE5lHUrvDzvalwi8xT_rMt7oa1FSGuK_e5yCdOtpfTvT&usqp=CAU", "created_at"=>"2020-05-16T01:55:29.580Z", "updated_at"=>"2020-05-16T01:55:29.580Z"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+[31mUnpermitted parameters: :password_digest, :created_at, :updated_at[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:26:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "daveYourFav@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `update'
+  [1m[36mUser Update (3.2ms)[0m  [1m[33mUPDATE "users" SET "userImg" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["userImg", "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSTFRO8pE5lHUrvDzvalwi8xT_rMt7oa1FSGuK_e5yCdOtpfTvT&usqp=CAU"], ["updated_at", "2020-05-16 02:05:30.776563"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:26:in `update'
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:26:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "daveYourFav@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$12$89R5BZ5yCgombvoEzwjS6uiPJUcfYpu1.F7ygYodwXSc55mztv8ES"], ["updated_at", "2020-05-16 02:05:31.009431"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:28:in `update'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:28:in `update'
+Completed 200 OK in 253ms (Views: 1.0ms | ActiveRecord: 8.6ms | Allocations: 10184)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:18:23 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"daveYourFave@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"daveYourFave@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "daveYourFave@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 28ms (Views: 1.3ms | ActiveRecord: 2.2ms | Allocations: 655)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:18:31 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"daveYourFave@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"daveYourFave@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "daveYourFave@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 631)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:18:36 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"daveYourFave@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"daveYourFave@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "daveYourFave@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 615)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:18:43 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"daveYourFave@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"daveYourFave@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "daveYourFave@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 615)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:18:57 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 217ms (Views: 0.1ms | ActiveRecord: 2.6ms | Allocations: 659)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:19:20 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 615)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:19:23 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"gc3@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"gc3@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gc3@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 615)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:19:26 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 228ms (Views: 10.6ms | ActiveRecord: 1.7ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 22:19:26 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (6.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 65ms (Views: 56.6ms | ActiveRecord: 6.2ms | Allocations: 20152)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:20:38 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 233ms (Views: 7.5ms | ActiveRecord: 1.8ms | Allocations: 906)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 22:20:38 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (3.0ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 63ms (Views: 53.7ms | ActiveRecord: 3.0ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:37:07 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 216ms (Views: 1.9ms | ActiveRecord: 1.1ms | Allocations: 690)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:37:12 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 230ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 906)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 22:37:12 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (7.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 106ms (Views: 97.6ms | ActiveRecord: 7.6ms | Allocations: 20154)
+
+
+Started POST "/login" for ::1 at 2020-05-15 22:38:45 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 248ms (Views: 3.0ms | ActiveRecord: 0.8ms | Allocations: 905)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 22:38:45 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 1.6ms | Allocations: 20117)
+
+
+Started GET "/logout" for ::1 at 2020-05-15 22:38:53 -0400
+Processing by SessionsController#logout as */*
+Completed 200 OK in 134ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1870)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-15 22:38:53 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.8ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.8ms | Allocations: 20115)
+
+

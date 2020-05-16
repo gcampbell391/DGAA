@@ -1,5 +1,6 @@
 import React from 'react'
 import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
+import Leaflet from 'leaflet'
 import Geocode from "react-geocode";
 
 
@@ -45,8 +46,17 @@ class AccountHomeMap extends React.Component {
 
     courseMarkerHelperMethod = (course) => {
         const courseCoords = [course.courseLat, course.courseLong]
+        // const customMark = Leaflet.Icon({
+        //     iconUrl: require('../images/BasketIcon.png'),
+        //     shadowUrl: require('../images/BasketIcon.png'),
+        //     iconSize: [38, 95], // size of the icon
+        //     shadowSize: [50, 64], // size of the shadow
+        //     iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+        //     shadowAnchor: [4, 62],  // the same for the shadow
+        //     popupAnchor: [-3, -76]// point from which the popup should open relative to the iconAnchor
+        // }) icon={customMark} to marker
         return (
-            <Marker position={courseCoords} key={course.name}>
+            <Marker position={courseCoords} key={course.name} >
                 <Popup key={course.name}>
                     <p>DGCourse Review Rating:</p><img src={course.dgRatingImg} alt={course.name}></img>
                     <h1>{course.name}</h1>
@@ -80,9 +90,9 @@ class AccountHomeMap extends React.Component {
                 {this.state.courses.map(course => {
                     return this.createCourseMarkers(course)
                 })}
-                {this.props.user ? <Marker position={this.state.usersCoordinates}>
+                {this.props.user ? <Marker position={this.state.usersCoordinates} >
                     <Popup>
-                        <img src={this.props.user.userImg} height="40" alt="User Home"></img>
+                        <h1>My Address</h1>
                     </Popup>
                 </Marker>
                     :
