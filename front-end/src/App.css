@@ -201,7 +201,7 @@ box-shadow: 2px 2px 11px black;
 margin-left: 10px;
 margin-right: 10px;
 text-align: center;
-padding-bottom: 20px;
+padding-bottom: 30px;
 }
 
 .courseDetails{
@@ -222,6 +222,7 @@ box-shadow: 2px 2px 11px black;
 margin-left: 10px;
 margin-right: 10px;
 padding: 10px;
+margin-bottom: 20px;
 }
 
 .scoreCardHeader{
