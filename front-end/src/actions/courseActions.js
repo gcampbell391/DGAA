@@ -8,7 +8,6 @@ export const addCourseDetails = course => {
 }
 
 export const addCoursePictures = course => {
-    debugger
     return (dispatch) => {
         dispatch({
             type: "ADD_COURSE_PICTURES",

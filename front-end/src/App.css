@@ -182,3 +182,48 @@ padding-right: 5px;
 .startGameBtn{
   margin-top: 20px;
 }
+
+.gameContainer{
+  height: 100%;
+  display: flex;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  
+}
+
+.holeDetails{
+width:50%;
+background-color: white;
+border-radius: 5px;
+box-shadow: 2px 2px 11px black;
+margin-left: 10px;
+margin-right: 10px;
+
+}
+
+.courseDetails{
+width:50%;
+background-color: white;
+border-radius: 5px;
+box-shadow: 2px 2px 11px black;
+margin-left: 10px;
+margin-right: 10px;
+}
+
+.scoreCard{
+text-align: center;
+background-image: url("./images/GrassBackground.jpeg");
+border-radius: 5px;
+box-shadow: 2px 2px 11px black;
+margin-left: 200px;
+margin-right: 200px;
+padding: 10px;
+}
+
+.scoreCardHeader{
+  font-size: 25px;
+  color:yellow;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+}

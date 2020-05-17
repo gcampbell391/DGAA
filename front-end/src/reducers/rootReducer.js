@@ -29,7 +29,6 @@ function coursesReducer(state = [], action) {
         case "ADD_COURSE_DETAILS":
             return [action.course]
         case "ADD_COURSE_PICTURES":
-            debugger
             return [...state, action.course]
         default:
             return state

@@ -4,6 +4,7 @@ import { Router, Route } from 'react-router-dom';
 import Welcome from "./containers/Welcome"
 import Home from "./containers/Home"
 import Friends from "./containers/Friends"
+import Game from "./containers/Game"
 import { connect } from "react-redux"
 import history from './history';
 
@@ -20,6 +21,7 @@ class App extends React.Component {
           <Route exact path="/" render={() => <Welcome />} />
           <Route exact path="/Account_Home" render={() => <Home />} />
           <Route exact path="/My_Friends" render={() => <Friends />} />
+          <Route exact path="/DGAA_Game_Play" render={() => <Game />} />
         </div>
       </Router>
     )

@@ -5,13 +5,17 @@ import Geocode from "react-geocode";
 import { connect } from "react-redux"
 import { addCourseDetails } from "../actions/courseActions"
 import { addCoursePictures } from "../actions/courseActions"
+import { Dimmer, Loader, Image } from 'semantic-ui-react'
+import history from "../history"
+
 
 
 class AccountHomeMap extends React.Component {
     state = {
         courses: [],
         positionCoordinates: [40.8831, -72.9422],
-        usersCoordinates: [0, 0]
+        usersCoordinates: [0, 0],
+        loading: false
     }
 
     componentDidMount() {
@@ -68,6 +72,7 @@ class AccountHomeMap extends React.Component {
 
     //Handles Start Round functionality
     handleStartRoundOnCourse = (course) => {
+        this.setState({ loading: true })
         console.log("Course Clicked: ", course)
         this.fetchCourseDetails(course)
         this.fetchCoursePictures(course)
@@ -103,16 +108,28 @@ class AccountHomeMap extends React.Component {
             .then(data => {
                 console.log("Course Pictures:", data)
                 this.props.addCoursePictures(data)
+                this.setState({ loading: false })
+                history.push("/DGAA_Game_Play")
             })
     }
 
     render() {
-        console.log("Courses:", this.state.courses)
-        console.log("Current User Coordinates: ", this.state.usersCoordinates)
+        if (this.state.loading) {
+            return (
+                <div >
+                    <Dimmer active>
+                        <Loader size='massive'>Preparing Game</Loader>
+                    </Dimmer>
+                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
+                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
+                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
+                </div>
+            )
+        }
         return (
             <LeafletMap
-                center={this.state.positionCoordinates}
-                zoom={7}
+                center={this.state.usersCoordinates}
+                zoom={10}
                 maxZoom={20}
                 attributionControl={true}
                 zoomControl={true}
