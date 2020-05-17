@@ -1,9 +1,14 @@
 import React from "react"
 
 const CourseDetails = (props) => {
+    console.log(props.course)
     return (
         <div className="courseDetails">
-            <h1>CourseDetails</h1>
+            <h1 id="gameCourseNameHeader">{props.course.name}</h1>
+            <div id="gameCoursePictureContainer">
+                <img src={props.coursePics.course_photo_url_medium} alt={props.course.name} id="gameCourseImg"></img>
+                <p id="gameCoursePictureCaption">{props.coursePics.course_photo_caption}</p>
+            </div>
         </div>
     )
 }

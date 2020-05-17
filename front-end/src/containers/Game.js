@@ -44,17 +44,22 @@ class Game extends React.Component {
                 </div>
             )
         }
-        return (
-            <div className="welcomeBodyContainer">
-                <Header />
-                <div className="gameContainer">
-                    <CourseDetails course={this.state.course[0]} />
-                    <HoleDetails hole={this.state.course[this.state.currentHole]} />
+        if (this.state.course) {
+            return (
+                <div className="welcomeBodyContainer">
+                    <Header />
+                    <div className="gameContainer">
+                        <CourseDetails
+                            course={this.state.course[0]}
+                            coursePics={this.state.coursePics}
+                        />
+                        <HoleDetails hole={this.state.course[this.state.currentHole]} />
+                    </div>
+                    <ScoreCard />
+                    <Footer />
                 </div>
-                <ScoreCard />
-                <Footer />
-            </div>
-        )
+            )
+        }
     }
 }
 

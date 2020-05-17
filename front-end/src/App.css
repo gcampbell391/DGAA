@@ -189,22 +189,25 @@ padding-right: 5px;
   text-align: center;
   margin-bottom: 20px;
   margin-top: 20px;
+  padding-bottom: 20px;
   
 }
 
 .holeDetails{
 width:50%;
-background-color: white;
+background-image: url("./images/GrassBackground.jpeg");
 border-radius: 5px;
 box-shadow: 2px 2px 11px black;
 margin-left: 10px;
 margin-right: 10px;
-
+text-align: center;
+padding-bottom: 20px;
 }
 
 .courseDetails{
+background-image: url("./images/GrassBackground.jpeg");
 width:50%;
-background-color: white;
+color: white;
 border-radius: 5px;
 box-shadow: 2px 2px 11px black;
 margin-left: 10px;
@@ -216,8 +219,8 @@ text-align: center;
 background-image: url("./images/GrassBackground.jpeg");
 border-radius: 5px;
 box-shadow: 2px 2px 11px black;
-margin-left: 200px;
-margin-right: 200px;
+margin-left: 10px;
+margin-right: 10px;
 padding: 10px;
 }
 
@@ -227,3 +230,90 @@ padding: 10px;
   font-weight: bold;
   text-shadow: 2px 2px black;
 }
+
+#gameCourseNameHeader{
+  font-size: 25px;
+  color:yellow;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+}
+#gameCourseImg{
+  border-radius: 10px;
+  box-shadow: 2px 2px 11px black;
+}
+
+#gameCoursePictureCaption{
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+}
+
+.teeParContainer{
+  height: 35%;
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.tee1Container{
+  color:green;
+  font-weight: bold;
+  text-shadow: 2px 2px yellow; 
+  width:50%;
+  background-color: white;
+  margin-right: 40px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 11px black;
+}
+
+.tee2Container{
+  color:green;
+  font-weight: bold;
+  text-shadow: 2px 2px yellow; 
+  width:50%;
+  background-color: white;
+  margin-left: 40px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 11px black;
+}
+
+.teeHeader{
+  font-size: 25px;
+  color:green;
+  font-weight: bold;
+  text-shadow: 2px 2px yellow;
+}
+
+.holeContainerHeader{
+  font-size: 25px;
+  color:yellow;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+}
+
+.strokesContainer{
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 11px black;
+  margin:50px;
+  font-size: 25px;
+  font-weight: bold;
+  max-width: 130px;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+.strokeInputContainer{
+margin:auto; 
+max-width: 120px;
+color:black
+}
+
+.strokeUserHeader{
+  color:green;
+  font-weight: bold;
+  text-shadow: 2px 2px yellow;
+}
+
+
