@@ -2,7 +2,16 @@ class UsersController < ApplicationController
 
     def index 
         users = User.all
-        render json: users, include: [:games, :scorecards]
+        render json: users, include: [:games, :scorecards, :dg_courses]
+    end
+
+    def show
+        user = User.find(params[:id])
+        if user
+            render json: user, include: [:games, :scorecards, :dg_courses]
+        else
+            render json: { error: "Not found!" }, status: 404
+        end 
     end
 
     def create 

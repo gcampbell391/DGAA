@@ -4,5 +4,6 @@ class DgCoursesController < ApplicationController
         courses = DgCourse.all
         render json: courses
     end
+
     
 end

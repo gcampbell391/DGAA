@@ -16083,3 +16083,1225 @@ Processing by DgCoursesController#index as */*
 Completed 200 OK in 97ms (Views: 95.6ms | ActiveRecord: 0.8ms | Allocations: 20118)
 
 
+Started POST "/login" for ::1 at 2020-05-18 14:21:45 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 237ms (Views: 0.8ms | ActiveRecord: 0.9ms | Allocations: 13405)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 14:21:46 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (3.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 118ms (Views: 109.2ms | ActiveRecord: 5.1ms | Allocations: 30398)
+
+
+Started POST "/login" for ::1 at 2020-05-18 14:25:28 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 213ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 926)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 14:25:28 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.9ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.9ms | Allocations: 20117)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 14:30:49 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.6ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 81ms (Views: 38.3ms | ActiveRecord: 2.7ms | Allocations: 31760)
+
+
+Started POST "/login" for ::1 at 2020-05-18 14:35:48 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 216ms (Views: 2.3ms | ActiveRecord: 1.5ms | Allocations: 1061)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 14:35:48 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (2.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 71ms (Views: 65.1ms | ActiveRecord: 2.1ms | Allocations: 29589)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 14:35:57 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 79ms (Views: 78.1ms | ActiveRecord: 0.5ms | Allocations: 20118)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 14:36:04 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.5ms | Allocations: 20132)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 14:36:08 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.5ms | Allocations: 20132)
+
+
+Started POST "/login" for ::1 at 2020-05-18 14:37:19 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 212ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 911)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 14:37:19 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started POST "/login" for ::1 at 2020-05-18 14:42:48 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 214ms (Views: 2.3ms | ActiveRecord: 0.6ms | Allocations: 940)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 14:42:49 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (2.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 2.6ms | Allocations: 20152)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 14:42:53 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (2.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (1.0ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 23ms (Views: 16.7ms | ActiveRecord: 3.8ms | Allocations: 7039)
+
+
+Started POST "/login" for ::1 at 2020-05-18 14:44:44 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 213ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 911)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 14:44:44 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (36.8ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 65ms (Views: 28.0ms | ActiveRecord: 36.8ms | Allocations: 20118)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 14:44:47 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.3ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.8ms | Allocations: 6974)
+
+
+Started POST "/login" for ::1 at 2020-05-18 14:51:24 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 217ms (Views: 2.3ms | ActiveRecord: 0.6ms | Allocations: 940)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 14:51:24 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (2.0ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 2.0ms | Allocations: 20152)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 14:51:26 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.8ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 1.8ms | Allocations: 7042)
+
+
+Started POST "/login" for ::1 at 2020-05-18 15:03:41 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 213ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 941)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 15:03:42 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.8ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 1.8ms | Allocations: 20152)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 15:03:43 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (1.9ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 44ms (Views: 34.1ms | ActiveRecord: 4.9ms | Allocations: 7039)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 15:03:45 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (6.8ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 87ms (Views: 79.6ms | ActiveRecord: 6.8ms | Allocations: 20118)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 15:03:46 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.4ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.6ms | Allocations: 6974)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 15:03:47 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.6ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 15:05:05 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.3ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.5ms | Allocations: 6974)
+
+
+Started POST "/login" for ::1 at 2020-05-18 15:07:55 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 212ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 910)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 15:07:55 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 15:08:09 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.6ms | Allocations: 6974)
+
+
+Started POST "/login" for ::1 at 2020-05-18 15:08:46 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 213ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 910)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 15:08:47 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.7ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.7ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 15:08:59 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.5ms | Allocations: 6975)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 15:27:12 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DgCoursesController#index as HTML
+  [1m[36mDgCourse Load (3.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 42ms (Views: 36.7ms | ActiveRecord: 3.1ms | Allocations: 20151)
+
+
+Started GET "/dg_courses/32" for ::1 at 2020-05-18 15:27:16 -0400
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for DgCoursesController):
+  
+actionpack (6.0.3) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/games" for ::1 at 2020-05-18 15:29:20 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mScorecard Load (0.7ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" WHERE "scorecards"."game_id" = ?[0m  [["game_id", 1]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDgCourse Load (1.3ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" WHERE "dg_courses"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mScorecard Load (0.1ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" WHERE "scorecards"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" WHERE "dg_courses"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mScorecard Load (0.1ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" WHERE "scorecards"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" WHERE "dg_courses"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 47ms (Views: 38.5ms | ActiveRecord: 4.5ms | Allocations: 32472)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 15:31:26 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.7ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 3.4ms | Allocations: 29188)
+
+
+  
+NoMethodError (undefined method `dg_courses' for #<User:0x00007ffd1decfbb8>
+Did you mean?  dgcourses
+               dgcourses=):
+  
+app/controllers/users_controller.rb:11:in `show'
+Started GET "/users/2" for ::1 at 2020-05-18 15:31:42 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.7ms | Allocations: 29198)
+
+
+  
+NoMethodError (undefined method `dg_course' for #<User:0x00007ffd1c202260>
+Did you mean?  dgcourses
+               dgcourses=):
+  
+app/controllers/users_controller.rb:11:in `show'
+Started GET "/users/2" for ::1 at 2020-05-18 15:31:59 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.8ms | Allocations: 29201)
+
+
+  
+NoMethodError (undefined method `dg_courses' for #<User:0x00007ffd214a2358>
+Did you mean?  dgcourses
+               dgcourses=):
+  
+app/controllers/users_controller.rb:11:in `show'
+Started GET "/users/2" for ::1 at 2020-05-18 15:32:50 -0400
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (1.0ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 61ms (Views: 38.7ms | ActiveRecord: 3.6ms | Allocations: 41250)
+
+
+Started POST "/login" for ::1 at 2020-05-18 15:34:58 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 210ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1064)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 15:34:58 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.8ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.8ms | Allocations: 20172)
+
+
+Started POST "/login" for ::1 at 2020-05-18 15:35:35 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 214ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 910)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 15:35:35 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.7ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.7ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 15:36:53 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.3ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 20ms (Views: 15.9ms | ActiveRecord: 1.0ms | Allocations: 8908)
+
+
+Started POST "/login" for ::1 at 2020-05-18 15:50:22 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 219ms (Views: 2.6ms | ActiveRecord: 0.9ms | Allocations: 940)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 15:50:23 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (3.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 3.5ms | Allocations: 20152)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 15:50:24 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.8ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.3ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 83ms (Views: 78.4ms | ActiveRecord: 2.4ms | Allocations: 9104)
+
+
+Started POST "/login" for ::1 at 2020-05-18 15:51:04 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 212ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 910)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 15:51:04 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 15:51:05 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.3ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.9ms | Allocations: 8908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 15:51:10 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 15:51:11 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.6ms | Allocations: 8908)
+
+
+Started POST "/login" for ::1 at 2020-05-18 15:55:29 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 212ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 910)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 15:55:30 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.6ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 15:55:31 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.3ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.8ms | Allocations: 8908)
+
+
+Started POST "/login" for ::1 at 2020-05-18 15:59:31 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 210ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 910)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 15:59:31 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.6ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 15:59:33 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.4ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 71ms (Views: 67.6ms | ActiveRecord: 0.9ms | Allocations: 8911)
+
+
+Started POST "/login" for ::1 at 2020-05-18 16:00:54 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 212ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 910)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:00:54 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.4ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:00:56 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.7ms | Allocations: 8908)
+
+
+Started POST "/login" for ::1 at 2020-05-18 16:01:26 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 213ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 910)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:01:26 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.4ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:01:27 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.3ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.8ms | Allocations: 8908)
+
+
+Started POST "/login" for ::1 at 2020-05-18 16:09:55 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 215ms (Views: 2.5ms | ActiveRecord: 0.7ms | Allocations: 940)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:09:55 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (2.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 2.2ms | Allocations: 20152)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:09:57 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (1.0ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.3ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 22ms (Views: 16.6ms | ActiveRecord: 2.5ms | Allocations: 9101)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:10:19 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:10:21 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.4ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 77ms (Views: 74.7ms | ActiveRecord: 0.9ms | Allocations: 8911)
+
+
+Started POST "/login" for ::1 at 2020-05-18 16:12:16 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 219ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 911)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:12:16 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.6ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:12:17 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.3ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.8ms | Allocations: 8908)
+
+
+Started POST "/login" for ::1 at 2020-05-18 16:15:02 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 222ms (Views: 2.7ms | ActiveRecord: 0.7ms | Allocations: 912)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:15:03 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (1.7ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 1.7ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:15:05 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 1.0ms | Allocations: 8908)
+
+
+Started POST "/login" for ::1 at 2020-05-18 16:17:58 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 214ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 910)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:17:58 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.6ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:17:59 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.3ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.8ms | Allocations: 8908)
+
+
+Started POST "/login" for ::1 at 2020-05-18 16:19:22 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 213ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 910)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:19:22 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:19:23 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.8ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 1.2ms | Allocations: 8911)
+
+
+Started POST "/login" for ::1 at 2020-05-18 16:20:51 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 214ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 910)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:20:51 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.8ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.8ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:20:53 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.3ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.8ms | Allocations: 8908)
+
+
+Started POST "/login" for ::1 at 2020-05-18 16:22:08 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 210ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started POST "/login" for ::1 at 2020-05-18 16:22:11 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 215ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 913)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:22:12 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:22:13 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.3ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.8ms | Allocations: 8908)
+
+
+Started POST "/login" for ::1 at 2020-05-18 16:23:15 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 217ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 910)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:23:16 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.6ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:23:17 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.7ms | Allocations: 8908)
+
+
+Started POST "/login" for ::1 at 2020-05-18 16:24:18 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 215ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 913)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:24:18 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 88ms (Views: 87.4ms | ActiveRecord: 0.6ms | Allocations: 20118)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:24:19 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.7ms | Allocations: 8908)
+
+
+Started POST "/login" for ::1 at 2020-05-18 16:29:10 -0400
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"dd@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"dd@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 200 OK in 221ms (Views: 2.7ms | ActiveRecord: 0.9ms | Allocations: 910)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:29:10 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (2.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 2.1ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:29:11 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.8ms | Allocations: 8908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:29:12 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.7ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.7ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:29:13 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.6ms | Allocations: 8908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:30:30 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:30:31 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.3ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 1.0ms | Allocations: 8908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:31:37 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 66ms (Views: 65.2ms | ActiveRecord: 0.6ms | Allocations: 20118)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:31:38 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.6ms | Allocations: 8908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:31:39 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.6ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:31:40 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.5ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.9ms | Allocations: 8908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:31:42 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.5ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.5ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:31:43 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.4ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.8ms | Allocations: 8908)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:31:48 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.7ms | Allocations: 8908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:31:49 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.6ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.6ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:31:54 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.2ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.7ms | Allocations: 8908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:31:58 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.4ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.4ms | Allocations: 20118)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:31:59 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.9ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 1.5ms | Allocations: 8908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:41:56 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (4.7ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 40ms (Views: 34.4ms | ActiveRecord: 4.7ms | Allocations: 20153)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:41:58 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.9ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 2.5ms | Allocations: 9101)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:42:00 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.3ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.2ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.7ms | Allocations: 8908)
+
+
+Started GET "/dg_courses" for ::1 at 2020-05-18 16:42:04 -0400
+Processing by DgCoursesController#index as */*
+  [1m[36mDgCourse Load (0.9ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses"[0m
+  ↳ app/controllers/dg_courses_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.9ms | Allocations: 20115)
+
+
+Started GET "/users/2" for ::1 at 2020-05-18 16:42:17 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mScorecard Load (0.3ms)[0m  [1m[34mSELECT "scorecards".* FROM "scorecards" INNER JOIN "games" ON "scorecards"."game_id" = "games"."id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mDgCourse Load (0.1ms)[0m  [1m[34mSELECT "dg_courses".* FROM "dg_courses" INNER JOIN "games" ON "dg_courses"."id" = "games"."dg_course_id" WHERE "games"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.7ms | Allocations: 8908)
+
+

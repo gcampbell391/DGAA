@@ -320,4 +320,41 @@ color:black
   text-shadow: 2px 2px yellow;
 }
 
+.statsContainer{
+  height: 100%;
+  display: flex;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.recentGameStats{
+  width:50%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 11px black;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-image: url("./images/GrassBackground.jpeg");
+  color:yellow;
+  font-weight: bold;
+  
+}
+
+.allGameStats{
+  width:50%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 11px black;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.recentGameTable{
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.recentGameDisplay{
+  text-shadow: 2px 2px black;
+}
 

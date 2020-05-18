@@ -2,7 +2,7 @@ class GamesController < ApplicationController
 
     def index 
         games = Game.all
-        render json: games, include: [:scorecards]
+        render json: games, include: [:scorecards, :dg_course]
     end
 
     def create 
