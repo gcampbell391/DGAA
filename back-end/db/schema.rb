@@ -41,11 +41,11 @@ ActiveRecord::Schema.define(version: 2020_05_13_180335) do
 
   create_table "games", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "dgcourse_id", null: false
+    t.integer "dg_course_id", null: false
     t.integer "score", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["dgcourse_id"], name: "index_games_on_dgcourse_id"
+    t.index ["dg_course_id"], name: "index_games_on_dg_course_id"
     t.index ["user_id"], name: "index_games_on_user_id"
   end
 
@@ -70,13 +70,13 @@ ActiveRecord::Schema.define(version: 2020_05_13_180335) do
   end
 
   create_table "scorecards", force: :cascade do |t|
-    t.integer "hole_id", null: false
     t.integer "game_id", null: false
     t.integer "strokeCount", default: 1
+    t.integer "holeNum"
+    t.integer "parCount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["game_id"], name: "index_scorecards_on_game_id"
-    t.index ["hole_id"], name: "index_scorecards_on_hole_id"
   end
 
   create_table "user_friends", force: :cascade do |t|
@@ -102,11 +102,10 @@ ActiveRecord::Schema.define(version: 2020_05_13_180335) do
   end
 
   add_foreign_key "dg_course_pictures", "dgcourses"
-  add_foreign_key "games", "dgcourses"
+  add_foreign_key "games", "dg_courses"
   add_foreign_key "games", "users"
   add_foreign_key "holes", "dgcourses"
   add_foreign_key "notifications", "users"
   add_foreign_key "scorecards", "games"
-  add_foreign_key "scorecards", "holes"
   add_foreign_key "user_friends", "users"
 end

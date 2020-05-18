@@ -130,10 +130,13 @@ background-color: lightgray;
 }
 
 #playerImg{
-  border-radius: 5px;
+  border-radius: 100%;
   margin-left: 5px;
   margin-bottom: 5px;
   height: 200px;
+  max-width: 220px;
+  border: 6px dotted yellow;
+
 }
 
 .mapFilterContainer{

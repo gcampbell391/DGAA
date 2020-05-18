@@ -5,7 +5,7 @@ import Geocode from "react-geocode";
 import { connect } from "react-redux"
 import { addCourseDetails } from "../actions/courseActions"
 import { addCoursePictures } from "../actions/courseActions"
-import { Dimmer, Loader, Image } from 'semantic-ui-react'
+import { Dimmer, Loader } from 'semantic-ui-react'
 import history from "../history"
 
 
@@ -120,9 +120,6 @@ class AccountHomeMap extends React.Component {
                     <Dimmer active>
                         <Loader size='massive'>Preparing Game</Loader>
                     </Dimmer>
-                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
-                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
-                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
                 </div>
             )
         }

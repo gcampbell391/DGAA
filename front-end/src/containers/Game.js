@@ -1,25 +1,32 @@
 import React from "react"
 import { connect } from "react-redux"
-import { Dimmer, Loader, Image } from 'semantic-ui-react'
+import { Dimmer, Loader } from 'semantic-ui-react'
 import Header from "./Header"
 import Footer from "../components/Footer";
 import ScoreCard from "../components/ScoreCard";
 import CourseDetails from "../components/CourseDetails";
 import HoleDetails from "../components/HoleDetails";
+import swal from 'sweetalert';
 import history from "../history"
 
 class Game extends React.Component {
     constructor() {
         super();
         this.state = {
-            course: null,
+            course: {
+                name: "Loading..."
+            },
             holes: null,
-            coursePics: null,
+            coursePics: {
+                course_photo_url_medium: require("../images/DGCourseDefault.jpeg"),
+                course_photo_caption: "Loading..."
+            },
             loading: true,
             currentHole: 1,
             currentUserScoreScard: [],
             loadingNextHole: false,
-            currentUserStanding: 0
+            currentUserStanding: 0,
+            currentUser: null
         }
     }
 
@@ -28,6 +35,7 @@ class Game extends React.Component {
             course: this.props.course,
             coursePics: this.props.courseImgs,
             holes: this.props.course["length"] - 1,
+            currentUser: this.props.currentUser
         })
         setTimeout(() => {
             this.setState({ loading: false })
@@ -56,11 +64,31 @@ class Game extends React.Component {
             this.setState({ currentHole: this.state.currentHole + 1 })
             this.setState({ loadingNextHole: false })
         }, 1000);
-        debugger
-        //Finishes game..need to send info to back end to log game info
         if (this.state.currentHole >= this.state.holes) {
             console.log("Game Completed!!!")
             console.log("Final ScoreCard: ", [...this.state.currentUserScoreScard, userHoleInfo])
+            const gameDetails = {
+                user: this.state.currentUser,
+                finalScoreCard: [...this.state.currentUserScoreScard, userHoleInfo],
+                course: this.props.course[0]
+            }
+            fetch('http://localhost:3000/games', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(gameDetails),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Mfer we did it!!!", data)
+                    swal({
+                        title: "Round Complete!",
+                        text: `Final Standing:  ${this.state.currentUserStanding - strokeParDifference} .You may view the full ScoreCard on your Statistics Page.`,
+                        icon: "success",
+                        button: "Return Home",
+                    });
+                })
             history.push("/Account_Home")
         }
     }
@@ -72,9 +100,6 @@ class Game extends React.Component {
                     <Dimmer active>
                         <Loader size='massive'>Starting Game</Loader>
                     </Dimmer>
-                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
-                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
-                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
                 </div>
             )
         }
@@ -84,42 +109,41 @@ class Game extends React.Component {
                     <Dimmer active>
                         <Loader size='massive'>Loading Next Hole</Loader>
                     </Dimmer>
-                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
-                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
-                    <Image src='https://react.semantic-ui.com/images/wireframe/short-paragraph.png' />
                 </div>
             )
         }
-        if (this.state.course !== null) {
-            return (
-                <div className="welcomeBodyContainer">
-                    <Header />
-                    <div className="gameContainer">
-                        <CourseDetails
-                            course={this.state.course[0]}
-                            coursePics={this.state.coursePics}
-                        />
-                        <HoleDetails
-                            hole={this.state.course[this.state.currentHole]}
-                            handleSubmitHoleBtn={this.handleSubmitHoleBtn}
-                            currentUserStanding={this.state.currentUserStanding}
-                        />
-                    </div>
-                    <ScoreCard
-                        currentUserScoreScard={this.state.currentUserScoreScard}
+        return (
+            <div className="welcomeBodyContainer">
+                <Header />
+                <div className="gameContainer">
+
+                    <CourseDetails
+                        course={this.props.course[0]}
+                        coursePics={this.state.coursePics}
                     />
-                    <Footer />
+                    <HoleDetails
+                        hole={this.state.course[this.state.currentHole]}
+                        handleSubmitHoleBtn={this.handleSubmitHoleBtn}
+                        currentUserStanding={this.state.currentUserStanding}
+                    />
                 </div>
-            )
-        }
+                <ScoreCard
+                    currentUserScoreScard={this.state.currentUserScoreScard}
+                />
+                <Footer />
+            </div>
+        )
+
     }
+
 }
 
 
 const mapStateToProps = state => {
     return {
         course: state.courses[0],
-        courseImgs: state.courses[1]
+        courseImgs: state.courses[1],
+        currentUser: state.users
     }
 }
 
