@@ -2,7 +2,8 @@ import React from "react"
 import Strokes from "./Strokes"
 
 const HoleDetails = (props) => {
-    if (props.hole) {
+    debugger
+    if (props.hole.hole_num) {
         return (
             <div className="holeDetails">
                 <h1 className="holeContainerHeader">Hole {props.hole.hole_num}</h1>

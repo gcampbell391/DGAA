@@ -14,7 +14,13 @@ const CourseDetails = (props) => {
     }
     else {
         return (
-            <div>Loading...</div>
+            <div className="courseDetails">
+                <h1 id="gameCourseNameHeader">{props.course.name}</h1>
+                <div id="gameCoursePictureContainer">
+                    <img src={require("../images/DGCourseDefault.jpeg")} alt="DefaultCourseImage" id="gameCourseImg"></img>
+                    <p id="gameCoursePictureCaption">Hole #6</p>
+                </div>
+            </div>
         )
     }
 }

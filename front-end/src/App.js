@@ -12,7 +12,6 @@ import Statistics from "./containers/Statistics"
 class App extends React.Component {
 
   render() {
-    console.log("App:", this.props.user)
     if (this.props.user === undefined) {
       history.push('/')
     }

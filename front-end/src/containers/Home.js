@@ -8,6 +8,7 @@ import Footer from "../components/Footer"
 import AccountHomeMap from "../components/AccountHomeMap"
 import EditPCModal from "./EditPCModal"
 import history from "../history"
+import { Dimmer, Loader } from 'semantic-ui-react'
 
 
 
@@ -18,12 +19,16 @@ class Home extends React.Component {
             currentUser: null,
             mapNameSearchTerm: "",
             mapCitySearchTerm: "",
-            renderPCEditForm: false
+            renderPCEditForm: false,
+            loading: true
         }
     }
 
     componentDidMount() {
         this.setState({ currentUser: this.props.user })
+        setTimeout(() => {
+            this.setState({ loading: false })
+        }, 1000);
     }
 
 
@@ -87,7 +92,15 @@ class Home extends React.Component {
 
 
     render() {
-        console.log("Home", this.state.currentUser)
+        if (this.state.loading) {
+            return (
+                <div >
+                    <Dimmer active>
+                        <Loader size='massive'>Loading Home</Loader>
+                    </Dimmer>
+                </div>
+            )
+        }
         if (this.state.currentUser) {
             return (
                 <div className="welcomeBodyContainer">

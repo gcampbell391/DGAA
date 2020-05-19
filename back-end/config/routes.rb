@@ -15,4 +15,10 @@ Rails.application.routes.draw do
   #Creates New Game
   post '/games', to: 'games#create'
 
+  #Creates a new friend
+  post '/users/add_friend', to: 'users#add_friend'
+
+  #Deletes a friend
+  post '/users/remove_friend', to: 'users#remove_friend'
+  
 end

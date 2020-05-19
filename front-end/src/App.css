@@ -53,6 +53,14 @@ background-size: 100% 100%;
 border-radius: 10px;
 }
 
+.friendsBodyContainer{
+background-image: url("./images/WelcomeImg.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100% 100%;
+border-radius: 10px;
+}
+
 #DGAALogo{
   height: 150px;
   box-shadow: 2px 2px 11px black;
@@ -226,6 +234,7 @@ margin-left: 10px;
 margin-right: 10px;
 padding: 10px;
 margin-bottom: 20px;
+height: 150px;
 }
 
 .scoreCardHeader{
@@ -357,4 +366,47 @@ color:black
 .recentGameDisplay{
   text-shadow: 2px 2px black;
 }
+
+.allUsersContainer{
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-bottom: 50px ;
+}
+
+.allUsersHeader{
+  font-size: 25px;
+  color:yellow;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  padding-top: 20px;
+}
+.myFriendsContainer{
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-bottom: 10px ;
+}
+
+#noFriendsHeader{
+font-size: 25px;
+  color:yellow;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.noStatsContainer{
+padding-bottom: 500px;
+}
+
+.noStatsHeader{
+  font-size: 45px;
+  color:yellow;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  padding-top: 20px;
+}
+
 
