@@ -21,8 +21,14 @@ const MapSearch = (props) => (
                 placeholder="Search by City..."
                 onChange={(event) => props.handleCityFilterChange(event)}
             />
+            <Form.Input
+                fluid
+                icon="compass outline"
+                iconPosition="left"
+                placeholder="Search by Zip..."
+                onChange={(event) => props.handleZipFilterChange(event)}
+            />
         </Form>
-
     </div >
 )
 

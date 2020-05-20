@@ -1,6 +1,5 @@
 import React from "react"
 import { Card, Image, Button } from "semantic-ui-react"
-import swal from 'sweetalert'
 
 class AllUsers extends React.Component {
     constructor() {
@@ -23,33 +22,24 @@ class AllUsers extends React.Component {
         return this.state.updatedUsers.slice(this.state.sliceIndex, this.state.sliceIndex + 5)
     }
 
+    //Handles Friend Back Click
     handleFriendsBackClick = () => {
-        if (this.state.sliceIndex === 0) {
-            swal("You're at the begining!")
-        }
-        else {
-            this.setState({ sliceIndex: this.state.sliceIndex - 5 })
-        }
+        this.setState({ sliceIndex: this.state.sliceIndex - 5 })
     }
 
+    //Handles Friend Next Click
     handleFriendsNexClick = () => {
-        if (this.state.sliceIndex + 5 > this.state.updatedUsers.length) {
-            swal("You're at the end!")
-        }
-        else {
-            this.setState({ sliceIndex: this.state.sliceIndex + 5 })
-        }
+        this.setState({ sliceIndex: this.state.sliceIndex + 5 })
     }
 
     render() {
-
         return (
             <div className="allUsersContainer">
                 <h1 className="allUsersHeader">All Users</h1>
                 <Card.Group itemsPerRow={5}>
                     {this.allUserSlicer().map(user => {
                         return <Card color='yellow'>
-                            <Image src={user.userImg} style={{ width: 'cover', height: '200px' }} />
+                            <Image src={user.userImg} className="usersPictures" />
                             <Card.Content>
                                 <Card.Header>{user.firstName}</Card.Header>
                                 <Card.Meta>
@@ -63,8 +53,8 @@ class AllUsers extends React.Component {
                     })}
                 </Card.Group>
                 <div className="allUsersButtons">
-                    <Button color="yellow" onClick={() => this.handleFriendsBackClick()}>Previous</Button>
-                    <Button color="yellow" onClick={() => this.handleFriendsNexClick()}>Next</Button>
+                    {this.state.sliceIndex === 0 ? null : <Button color="yellow" onClick={() => this.handleFriendsBackClick()}>Previous</Button>}
+                    {this.state.sliceIndex + 5 > this.state.updatedUsers.length ? null : <Button color="yellow" onClick={() => this.handleFriendsNexClick()}>Next</Button>}
                 </div>
             </div >
         )

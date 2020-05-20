@@ -46,9 +46,12 @@ class AccountHomeMap extends React.Component {
 
     //Creates Markers for all courses
     createCourseMarkers = (course) => {
+        console.log("Test1: ", course)
         if (course.name.toLowerCase().includes(this.props.mapNameSearchTerm)) {
             if (course.city.toLowerCase().includes(this.props.mapCitySearchTerm)) {
-                return this.courseMarkerHelperMethod(course)
+                if (course.zip.toString().includes(this.props.mapZipSearchTerm)) {
+                    return this.courseMarkerHelperMethod(course)
+                }
             }
         }
     }

@@ -19,6 +19,7 @@ class Home extends React.Component {
             currentUser: null,
             mapNameSearchTerm: "",
             mapCitySearchTerm: "",
+            mapZipSearchTerm: "",
             renderPCEditForm: false,
             loading: true
         }
@@ -46,12 +47,18 @@ class Home extends React.Component {
 
     //Handles input change for map filter search for course name
     handleNameFilterChange = (event) => {
-        this.setState({ mapNameSearchTerm: event.target.value })
+        this.setState({ mapNameSearchTerm: event.target.value.toLowerCase() })
     }
 
     //Handles input change for map filter search for course city
     handleCityFilterChange = (event) => {
-        this.setState({ mapCitySearchTerm: event.target.value })
+        this.setState({ mapCitySearchTerm: event.target.value.toLowerCase() })
+    }
+
+    //Handles input change for map filter search for course zip
+    handleZipFilterChange = (event) => {
+        console.log(event.target.value)
+        this.setState({ mapZipSearchTerm: event.target.value })
     }
 
     //Handles Edit PlayerCard Form Render
@@ -109,6 +116,7 @@ class Home extends React.Component {
                         user={this.state.currentUser}
                         mapNameSearchTerm={this.state.mapNameSearchTerm}
                         mapCitySearchTerm={this.state.mapCitySearchTerm}
+                        mapZipSearchTerm={this.state.mapZipSearchTerm}
                     />
                     <EditPCModal
                         currentUser={this.state.currentUser}
@@ -121,6 +129,7 @@ class Home extends React.Component {
                         user={this.state.currentUser}
                         handleNameFilterChange={this.handleNameFilterChange}
                         handleCityFilterChange={this.handleCityFilterChange}
+                        handleZipFilterChange={this.handleZipFilterChange}
                         handleEditPCClick={this.handleEditPCClick}
                     />
                     <Footer />

@@ -10,7 +10,7 @@ const PlayerCard = (props) => {
             <div className="playerCard">
                 <div className="playerCardPicture">
                     <img src={props.user.userImg} id="playerImg" alt={props.user.firstName}></img>
-                    <Button content='Update PlayerCard' icon='address card' labelPosition='left' onClick={props.handleEditPCClick} color="yellow" />
+                    <Button content='Update PlayerCard' icon='address card' labelPosition='left' onClick={props.handleEditPCClick} color="green" />
                 </div>
                 <div className="playerCardDetails">
                     <h3 id="playerCardHeader">Personal Info</h3>
@@ -31,6 +31,7 @@ const PlayerCard = (props) => {
                 <MapSearch
                     handleNameFilterChange={props.handleNameFilterChange}
                     handleCityFilterChange={props.handleCityFilterChange}
+                    handleZipFilterChange={props.handleZipFilterChange}
                 />
             </div>
         </div>
