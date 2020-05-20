@@ -16,4 +16,50 @@ class User < ApplicationRecord
         end
     end
 
+    def games_played
+        self.games.count
+    end
+
+    def average_score
+        allScore = 0
+        self.games.each do |game|
+            allScore = allScore + game.score
+        end
+        if(allScore == 0) 
+            return 0
+        end
+        return avg_score = (allScore/ games_played)
+    end
+
+
+    def holes_played
+        self.scorecards.count
+    end
+
+    def average_throws_per_hole
+        totalThrows = 0
+        self.scorecards.each do |card|
+            totalThrows = totalThrows + card.strokeCount
+        end
+        if(totalThrows == 0) 
+            return 0
+        end
+        return  avg_throw = (totalThrows/holes_played)
+    end
+
+    def average_par_per_hole
+        totalPars = 0
+        self.scorecards.each do |card|
+            totalPars = totalPars + card.parCount
+        end
+        if(totalPars == 0) 
+            return 0
+        end
+        return avg_par = (totalPars/holes_played)
+    end
+
+    def average_difference_per_hole
+        average_throws_per_hole - average_par_per_hole 
+    end
+
 end

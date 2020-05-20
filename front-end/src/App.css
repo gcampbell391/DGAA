@@ -356,6 +356,7 @@ color:black
   box-shadow: 2px 2px 11px black;
   margin-left: 100px;
   margin-right: 100px;
+  background-image: url("./images/GrassBackground.jpeg");
 }
 .recentGameTable{
   margin-bottom: 20px;
@@ -409,4 +410,18 @@ padding-bottom: 500px;
   padding-top: 20px;
 }
 
+.AllGameDisplay{
+  color:green;
+  font-weight: bold;
+  text-shadow: 2px 2px yellow;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  box-shadow: 2px 2px 11px black;
+}
 

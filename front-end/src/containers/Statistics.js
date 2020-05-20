@@ -16,7 +16,7 @@ class Statistics extends React.Component {
     }
 
     componentDidMount() {
-        const userId = this.props.user[0].id
+        const userId = this.props.user[0].user.id
         fetch(`http://localhost:3000/users/${userId}`)
             .then(resp => resp.json())
             .then(data => {
@@ -46,7 +46,7 @@ class Statistics extends React.Component {
                             <RecentGame user={this.state.user} />
                         </div>
                         <div className="allGameStats">
-                            <AllGames user={this.state.user} />
+                            <AllGames user={this.props.user} />
                         </div>
                     </div>
                     <Footer />

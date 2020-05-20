@@ -2,7 +2,6 @@ import React from "react"
 import Strokes from "./Strokes"
 
 const HoleDetails = (props) => {
-    debugger
     if (props.hole.hole_num) {
         return (
             <div className="holeDetails">

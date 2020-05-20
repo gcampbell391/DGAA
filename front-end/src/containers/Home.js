@@ -25,7 +25,7 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({ currentUser: this.props.user })
+        this.setState({ currentUser: this.props.user.user })
         setTimeout(() => {
             this.setState({ loading: false })
         }, 1000);
@@ -96,7 +96,7 @@ class Home extends React.Component {
             return (
                 <div >
                     <Dimmer active>
-                        <Loader size='massive'>Loading Home</Loader>
+                        <Loader size='massive'>Loading </Loader>
                     </Dimmer>
                 </div>
             )

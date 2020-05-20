@@ -22,7 +22,7 @@ class Friends extends React.Component {
 
 
     componentDidMount() {
-        const currentUserID = this.props.currentUser[0].id
+        const currentUserID = this.props.currentUser[0].user.id
         console.log("Current User ID: ", currentUserID)
         fetch("http://localhost:3000/users")
             .then(resp => resp.json())
@@ -58,7 +58,7 @@ class Friends extends React.Component {
     //Handles action to add friend 
     handleAddFriendClick = (friend) => {
         const friendship = {
-            user_id: this.props.currentUser[0].id,
+            user_id: this.props.currentUser[0].user.id,
             friend_id: friend.id
         }
         console.log("Add Friend: ", friend)
@@ -73,6 +73,8 @@ class Friends extends React.Component {
             .then(data => {
                 console.log(data)
                 if (this.state.myFriends.length > 0) {
+                    debugger
+                    //Need to fix this error of adding friend who is already a friend
                     if (this.state.myFriends[0].friend_id === data.friendship1.friend_id) {
                         console.log("You are friends already..")
                         return this.state.myFriends
