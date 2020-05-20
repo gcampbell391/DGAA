@@ -54,10 +54,10 @@ border-radius: 10px;
 }
 
 .friendsBodyContainer{
-background-image: url("./images/WelcomeImg.jpg");
-background-repeat: no-repeat;
-background-position: center;
-background-size: 100% 100%;
+  background-image: url("./images/WelcomeImg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 border-radius: 10px;
 }
 
@@ -376,9 +376,9 @@ color:black
 
 .allUsersHeader{
   font-size: 25px;
-  color:yellow;
+  color:green;
   font-weight: bold;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px white;
   text-align: center;
   padding-top: 20px;
 }
@@ -390,7 +390,7 @@ color:black
 
 #noFriendsHeader{
 font-size: 25px;
-  color:yellow;
+  color:green;
   font-weight: bold;
   text-shadow: 2px 2px black;
   text-align: center;
@@ -425,3 +425,12 @@ padding-bottom: 500px;
   box-shadow: 2px 2px 11px black;
 }
 
+.friendCardDetails{
+  
+}
+
+.allUsersButtons{
+  margin-top: 20px;
+  text-align: center;
+  
+}

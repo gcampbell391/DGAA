@@ -12,9 +12,9 @@ const MyFriends = (props) => {
     return (
         <div className="myFriendsContainer">
             <h1 className="allUsersHeader">My Friends</h1>
-            <Card.Group itemsPerRow={5}>
+            <Card.Group itemsPerRow={5} >
                 {props.updatedFriends.map(user => {
-                    return <Card color='yellow'>
+                    return <Card color='yellow' className="friendCardDetails">
                         <Image src={user.userImg} style={{ width: 'cover', height: '200px' }} />
                         <Card.Content>
                             <Card.Header>{user.firstName}</Card.Header>

@@ -6,6 +6,7 @@ import { userLogout } from "../actions/userActions"
 import MyFriends from "../components/MyFriends"
 import AllUsers from "../components/AllUsers"
 import { Dimmer, Loader } from 'semantic-ui-react'
+import swal from 'sweetalert'
 
 
 class Friends extends React.Component {
@@ -16,7 +17,7 @@ class Friends extends React.Component {
             myFriends: [],
             updatedFriends: [],
             currentUser: null,
-            loading: true
+            loading: true,
         }
     }
 
@@ -40,7 +41,7 @@ class Friends extends React.Component {
             })
         setTimeout(() => {
             this.setState({ loading: false })
-        }, 3000);
+        }, 1000);
     }
 
 
@@ -73,20 +74,21 @@ class Friends extends React.Component {
             .then(data => {
                 console.log(data)
                 if (this.state.myFriends.length > 0) {
-                    debugger
-                    //Need to fix this error of adding friend who is already a friend
-                    if (this.state.myFriends[0].friend_id === data.friendship1.friend_id) {
-                        console.log("You are friends already..")
-                        return this.state.myFriends
+                    let count = 0
+                    while (count < this.state.myFriends.length) {
+                        if (this.state.myFriends[count].friend_id === data.friendship1.friend_id) {
+                            swal("You're already friends!")
+                            return this.state.myFriends
+                        }
+                        count++
                     }
-                    else {
-                        this.setState({ myFriends: [...this.state.myFriends, data.friendship1] })
-                        fetch(`http://localhost:3000/users/${data.friendship1.friend_id}`)
-                            .then(resp => resp.json())
-                            .then(data => {
-                                this.setState({ updatedFriends: [...this.state.updatedFriends, data] })
-                            })
-                    }
+                    this.setState({ myFriends: [...this.state.myFriends, data.friendship1] })
+                    fetch(`http://localhost:3000/users/${data.friendship1.friend_id}`)
+                        .then(resp => resp.json())
+                        .then(data => {
+                            this.setState({ updatedFriends: [...this.state.updatedFriends, data] })
+                        })
+
                 }
                 else {
                     this.setState({ myFriends: [...this.state.myFriends, data.friendship1] })
@@ -139,7 +141,6 @@ class Friends extends React.Component {
             })
     }
 
-
     render() {
         if (this.state.loading) {
             return (
@@ -161,6 +162,8 @@ class Friends extends React.Component {
                     allUsers={this.state.allUsers}
                     currentUser={this.props.currentUser}
                     handleAddFriendClick={this.handleAddFriendClick}
+                    handleFriendsBackClick={this.handleFriendsBackClick}
+                    handleFriendsNexClick={this.handleFriendsNexClick}
                 />
             </div >
         )

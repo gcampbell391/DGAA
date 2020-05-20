@@ -96,7 +96,7 @@ class Home extends React.Component {
             return (
                 <div >
                     <Dimmer active>
-                        <Loader size='massive'>Loading </Loader>
+                        <Loader size='massive'>Loading Home</Loader>
                     </Dimmer>
                 </div>
             )
