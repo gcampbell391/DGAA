@@ -1,25 +1,29 @@
 import React from "react"
-import { Card, Image, Button } from "semantic-ui-react"
+import { Card, Image, Button, Input } from "semantic-ui-react"
 
 class AllUsers extends React.Component {
     constructor() {
         super()
         this.state = {
             sliceIndex: 0,
-            updatedUsers: []
+            updatedUsers: [],
+            nameSearchTerm: ""
         }
     }
 
     componentDidMount() {
         const updatedUsers = this.props.allUsers.filter(user => {
-            return user.id !== this.props.currentUser[0].id
+            return user.id !== this.props.currentUser[0].user.id
         })
         this.setState({ updatedUsers: updatedUsers })
     }
 
     //Splices AllUsers into groups of 5 for display
     allUserSlicer = () => {
-        return this.state.updatedUsers.slice(this.state.sliceIndex, this.state.sliceIndex + 5)
+        const searchUsers = this.state.updatedUsers.filter(user => {
+            return user.firstName.toLowerCase().includes(this.state.nameSearchTerm.toLowerCase())
+        })
+        return searchUsers.slice(this.state.sliceIndex, this.state.sliceIndex + 5)
     }
 
     //Handles Friend Back Click
@@ -32,10 +36,25 @@ class AllUsers extends React.Component {
         this.setState({ sliceIndex: this.state.sliceIndex + 5 })
     }
 
+    //Handles Name Search Input Change
+    handleNameSearchChange = (event) => {
+        this.setState({ nameSearchTerm: event.target.value })
+    }
+
     render() {
         return (
             <div className="allUsersContainer">
-                <h1 className="allUsersHeader">All Users</h1>
+                <div className="allUsersSearch">
+                    <p className="allUsersHeader">All Users</p>
+                    <Input
+                        size='large'
+                        icon="user"
+                        iconPosition="left"
+                        placeholder="Search Friends By Name..."
+                        id="nameSearch"
+                        onChange={(event) => this.handleNameSearchChange(event)}
+                    />
+                </div>
                 <Card.Group itemsPerRow={5}>
                     {this.allUserSlicer().map(user => {
                         return <Card color='yellow'>
