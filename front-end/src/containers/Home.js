@@ -9,6 +9,8 @@ import AccountHomeMap from "../components/AccountHomeMap"
 import EditPCModal from "./EditPCModal"
 import history from "../history"
 import { Dimmer, Loader } from 'semantic-ui-react'
+import UpdatePassword from '../forms/UpdatePassword'
+import swal from 'sweetalert'
 
 
 
@@ -21,6 +23,7 @@ class Home extends React.Component {
             mapCitySearchTerm: "",
             mapZipSearchTerm: "",
             renderPCEditForm: false,
+            renderPasswordForm: false,
             loading: true
         }
     }
@@ -71,16 +74,58 @@ class Home extends React.Component {
         this.setState({ renderPCEditForm: false })
     }
 
-    //
+    //Handles input change on PC Form dynamically
     handleEditPCFormInputChange = (event) => {
         this.setState({ currentUser: { ...this.state.currentUser, [event.target.name]: event.target.value } })
+    }
+
+    //Handles close btn on password form
+    handlePasswordFormCloseBtn = () => {
+        this.setState({ renderPasswordForm: false })
+    }
+
+    handleEditPasswordClick = () => {
+        this.setState({ renderPasswordForm: true })
+    }
+
+    handlePasswordFormSubmit = (event) => {
+        event.preventDefault();
+        const oldPass = event.target.querySelector("#oldPassword").value
+        const newPass = event.target.querySelector("#newPassword").value
+        if (oldPass === newPass) {
+            return swal("Current Password and New Password Match!", "If you would like to change your password, please select a different password than your current one.", "error");
+        }
+        const passwordData = {
+            oldPass: oldPass,
+            newPass: newPass
+        }
+        fetch(`http://localhost:3000/update_password/${this.state.currentUser.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(passwordData),
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    return swal("Wrong Current Password!", "Please ensure you enter the correct current password to update to a new one.", "error");
+
+                }
+                else {
+                    console.log(data)
+                    swal("Password Changed!", "Your password has been successfully updated.", "success");
+                    this.setState({ currentUser: data })
+                    this.setState({ renderPasswordForm: false })
+                }
+            })
+
     }
 
     //Hanldes Submit btn on Edit PlayerCard Form
     handlePCFormEditSubmit = (event) => {
         event.preventDefault();
-        const userPassword = event.target.querySelector("#passwordInput").value
-        const updatedUser = { ...this.state.currentUser, password: userPassword }
+        const updatedUser = this.state.currentUser
         fetch(`http://localhost:3000/users/${this.state.currentUser.id}`, {
             method: 'PATCH',
             headers: {
@@ -90,6 +135,7 @@ class Home extends React.Component {
         })
             .then(response => response.json())
             .then(data => {
+                debugger
                 console.log(data)
                 this.setState({ currentUser: data.user })
                 this.setState({ renderPCEditForm: false })
@@ -118,6 +164,11 @@ class Home extends React.Component {
                         mapCitySearchTerm={this.state.mapCitySearchTerm}
                         mapZipSearchTerm={this.state.mapZipSearchTerm}
                     />
+                    <UpdatePassword
+                        handlePasswordFormCloseBtn={this.handlePasswordFormCloseBtn}
+                        renderPasswordForm={this.state.renderPasswordForm}
+                        handlePasswordFormSubmit={this.handlePasswordFormSubmit}
+                    />
                     <EditPCModal
                         currentUser={this.state.currentUser}
                         renderPCEditForm={this.state.renderPCEditForm}
@@ -131,6 +182,7 @@ class Home extends React.Component {
                         handleCityFilterChange={this.handleCityFilterChange}
                         handleZipFilterChange={this.handleZipFilterChange}
                         handleEditPCClick={this.handleEditPCClick}
+                        handleEditPasswordClick={this.handleEditPasswordClick}
                     />
                     <Footer />
                 </div>

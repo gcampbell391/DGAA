@@ -46,7 +46,6 @@ class AccountHomeMap extends React.Component {
 
     //Creates Markers for all courses
     createCourseMarkers = (course) => {
-        console.log("Test1: ", course)
         if (course.name.toLowerCase().includes(this.props.mapNameSearchTerm)) {
             if (course.city.toLowerCase().includes(this.props.mapCitySearchTerm)) {
                 if (course.zip.toString().includes(this.props.mapZipSearchTerm)) {
@@ -76,7 +75,6 @@ class AccountHomeMap extends React.Component {
     //Handles Start Round functionality
     handleStartRoundOnCourse = (course) => {
         this.setState({ loading: true })
-        console.log("Course Clicked: ", course)
         this.fetchCourseDetails(course)
         this.fetchCoursePictures(course)
     }
@@ -109,7 +107,6 @@ class AccountHomeMap extends React.Component {
         return fetch(proxyurl + fetchUrl)
             .then(resp => resp.json())
             .then(data => {
-                console.log("Course Pictures:", data)
                 this.props.addCoursePictures(data)
                 this.setState({ loading: false })
                 history.push("/DGAA_Game_Play")

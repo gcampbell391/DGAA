@@ -39,7 +39,6 @@ class UsersController < ApplicationController
         byebug
         @user = User.find_by(id: params[:id])
         @user.update(user_params)
-        @user.password_digest = BCrypt::Password.create(params["password"])
         byebug
         @user.save
         render json: {
@@ -61,6 +60,20 @@ class UsersController < ApplicationController
         friendship = UserFriend.find_by(id: params["_json"][0][:id])
         friendship.destroy
         render json: {status: "Friendship terminated"}
+    end
+
+    def resetpassword
+        user = User.find_by(id: params[:id])
+        if user && user.authenticate(params[:oldPass])
+            session[:user_id] = user.id
+            user.password_digest = BCrypt::Password.create(params[:newPass])
+            user.save
+            render json: user
+        else
+            render json:{
+                error: "Invalid"
+            }
+        end
     end
 
 private

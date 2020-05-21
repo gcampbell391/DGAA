@@ -20,9 +20,6 @@
   text-align: center;
 }
 
-#headerContainer{
-
-}
 
 .LoginFormContainer{
   margin-top: 320px;
@@ -104,8 +101,8 @@ background-color: lightgray;
   border-radius: 10px;
   margin-bottom: 50px;
   padding-bottom: 5px;
-  margin-right: 20px;
-  margin-left: 10px;
+  margin-right: 160px;
+  margin-left:40px ;
 }
 
 .playerCardPicture{
@@ -135,7 +132,7 @@ background-color: lightgray;
   border-radius: 5px;
   margin-left: 5px;
   margin-bottom: 5px;
-  height: 200px;
+  height: 150px;
   max-width: 220px;
 
 }
@@ -442,4 +439,8 @@ padding-bottom: 500px;
   width: 200px;
   margin: auto;
   border-radius: 10px;
+}
+
+.userUpdatedBtns{
+margin-top: 32px;
 }

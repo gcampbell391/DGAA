@@ -3,7 +3,6 @@ import { Button, Header, Image, Modal, Form } from 'semantic-ui-react'
 
 const EditPCModal = (props) => (
     <Modal open={props.renderPCEditForm}>
-        {console.log(props)}
         <Modal.Header>Update PlayerCard</Modal.Header>
         <Modal.Content image>
             <Image wrapped size='medium' src={require("../images/MultiDiscs.png")} alt="Discs Form Image" />
@@ -29,15 +28,6 @@ const EditPCModal = (props) => (
                         name="email"
                         value={props.currentUser.email}
                         onChange={(event) => props.handleEditPCFormInputChange(event)}
-                    />
-                    <Form.Input
-                        required
-                        fluid
-                        icon="lock"
-                        iconPosition="left"
-                        placeholder="Password"
-                        type="password"
-                        id="passwordInput"
                     />
                     <Form.Input
                         required

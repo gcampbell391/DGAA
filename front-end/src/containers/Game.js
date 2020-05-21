@@ -81,7 +81,6 @@ class Game extends React.Component {
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log("Mfer we did it!!!", data)
                     swal({
                         title: "Round Complete!",
                         text: `Final Standing:  ${this.state.currentUserStanding - strokeParDifference} .You may view the full ScoreCard on your Statistics Page.`,

@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   #Update Users
   patch '/users/:id', to: 'users#update'
 
+  #Updates User Password
+  patch '/update_password/:id', to: 'users#resetpassword'
+
   #Authentication routes
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#logout'
