@@ -17,10 +17,16 @@ const HoleDetails = (props) => {
                         <p>Length: {props.hole.tee_2_len}</p>
                         <p>Par: {props.hole.tee_2_par}</p>
                     </div>
+                    <div className="tee3Container">
+                        <h1 className="teeHeader">Tee 3</h1>
+                        <p>Length: {props.hole.tee_3_len}</p>
+                        <p>Par: {props.hole.tee_3_par}</p>
+                    </div>
                 </div>
                 <Strokes
                     handleSubmitHoleBtn={props.handleSubmitHoleBtn}
                     currentUserStanding={props.currentUserStanding}
+                    hole={props.hole}
                 />
             </div>
         )
@@ -41,10 +47,16 @@ const HoleDetails = (props) => {
                             <p>Length: {props.hole.tee_2_len}</p>
                             <p>Par: {props.hole.tee_2_par}</p>
                         </div>
+                        <div className="tee3Container">
+                            <h1 className="teeHeader">Tee 3</h1>
+                            <p>Length: {props.hole.tee_3_len}</p>
+                            <p>Par: {props.hole.tee_3_par}</p>
+                        </div>
                     </div>
                     <Strokes
                         handleSubmitHoleBtn={props.handleSubmitHoleBtn}
                         currentUserStanding={props.currentUserStanding}
+                        hole={props.hole}
                     />
                 </div>
             )

@@ -39,7 +39,7 @@ class Game extends React.Component {
         })
         setTimeout(() => {
             this.setState({ loading: false })
-        }, 1000);
+        }, 3000);
     }
 
     handleSubmitHoleBtn = (event) => {

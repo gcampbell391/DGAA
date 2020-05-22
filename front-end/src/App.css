@@ -264,9 +264,8 @@ height: 150px;
   color:green;
   font-weight: bold;
   text-shadow: 2px 2px yellow; 
-  width:50%;
+  width:33%;
   background-color: white;
-  margin-right: 40px;
   border-radius: 10px;
   box-shadow: 2px 2px 11px black;
 }
@@ -275,7 +274,18 @@ height: 150px;
   color:green;
   font-weight: bold;
   text-shadow: 2px 2px yellow; 
-  width:50%;
+  width:33%;
+  background-color: white;
+  margin-left: 40px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 11px black;
+}
+
+.tee3Container{
+  color:green;
+  font-weight: bold;
+  text-shadow: 2px 2px yellow; 
+  width:33%;
   background-color: white;
   margin-left: 40px;
   border-radius: 10px;

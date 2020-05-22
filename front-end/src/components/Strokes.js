@@ -3,18 +3,30 @@ import { Dropdown, Button, Form } from "semantic-ui-react"
 
 
 const Strokes = (props) => {
-    const teeOptions = [
-        {
+    console.log(props.hole)
+    let teeOptions = []
+    if (props.hole.tee_1_len > 0) {
+        teeOptions.push({
             key: "Tee 1",
             text: "Tee 1",
             value: "Tee 1"
-        },
-        {
+        })
+    }
+    if (props.hole.tee_2_len > 0) {
+        teeOptions.push({
             key: "Tee 2",
             text: "Tee 2",
             value: "Tee 2"
-        }
-    ]
+        })
+    }
+    if (props.hole.tee_3_len > 0) {
+        teeOptions.push({
+            key: "Tee 3",
+            text: "Tee 3",
+            value: "Tee 3"
+        })
+    }
+
     const strokeOptions = [
         {
             key: "Stroke 1",
@@ -58,6 +70,7 @@ const Strokes = (props) => {
         }
     ]
     return (
+
         <div className="strokesContainer" >
             <Form size="tiny" onSubmit={(event) => props.handleSubmitHoleBtn(event)}>
                 <p className="strokeUserHeader">DannyD</p>
