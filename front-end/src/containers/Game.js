@@ -39,21 +39,27 @@ class Game extends React.Component {
         })
         setTimeout(() => {
             this.setState({ loading: false })
-        }, 3000);
+        }, 2000);
     }
 
     handleSubmitHoleBtn = (event) => {
         event.preventDefault();
         const currentHole = this.state.course[this.state.currentHole]
         const teeSelection = event.target.querySelector("#teeHoleInput").querySelector(".text").innerText
+        if (teeSelection === "Select A Tee") {
+            return swal("Please Enter a Tee Option!")
+        }
         const teeNumber = teeSelection.split(" ")[1]
         const holePar = currentHole[`tee_${teeNumber}_par`]
-        const strokeCount = parseInt(event.target.querySelector("#strokeHoleInput").querySelector(".text").innerText)
-        const strokeParDifference = parseInt(holePar) - strokeCount
+        const strokeCount = event.target.querySelector("#strokeHoleInput").querySelector(".text").innerText
+        if (strokeCount === "Enter Stroke") {
+            return swal("Please Enter a Stroke!")
+        }
+        const strokeParDifference = parseInt(holePar) - parseInt(strokeCount)
         this.setState({ currentUserStanding: this.state.currentUserStanding - strokeParDifference })
         const userHoleInfo = {
             hole: this.state.currentHole,
-            stroke: strokeCount,
+            stroke: parseInt(strokeCount),
             par: holePar,
         }
         console.log("User Data:", userHoleInfo)

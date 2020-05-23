@@ -135,7 +135,6 @@ class Home extends React.Component {
         })
             .then(response => response.json())
             .then(data => {
-                debugger
                 console.log(data)
                 this.setState({ currentUser: data.user })
                 this.setState({ renderPCEditForm: false })
@@ -178,6 +177,7 @@ class Home extends React.Component {
                     />
                     <PlayerCard
                         user={this.state.currentUser}
+                        followers={this.props.user.followers}
                         handleNameFilterChange={this.handleNameFilterChange}
                         handleCityFilterChange={this.handleCityFilterChange}
                         handleZipFilterChange={this.handleZipFilterChange}

@@ -132,8 +132,8 @@ background-color: lightgray;
   border-radius: 5px;
   margin-left: 5px;
   margin-bottom: 5px;
-  height: 150px;
-  max-width: 220px;
+  height: 165px;
+  max-width: 180px;
 
 }
 
@@ -226,7 +226,7 @@ margin-left: 10px;
 margin-right: 10px;
 padding: 10px;
 margin-bottom: 20px;
-height: 150px;
+height: 270px;
 }
 
 .scoreCardHeader{
@@ -443,7 +443,6 @@ padding-bottom: 500px;
   
 }
 
-
 .usersPictures{
   height:200px;
   width: 200px;
@@ -451,11 +450,15 @@ padding-bottom: 500px;
   border-radius: 10px;
 }
 
-.userUpdatedBtns{
-margin-top: 32px;
-}
-
 .allUsersSearch{
   text-align: center;
   padding-bottom: 10px;
+}
+
+.loadingFiller{
+padding-bottom: 350px;
+}
+
+.AllGameDisplayBtn{
+  margin-top: 30px;
 }

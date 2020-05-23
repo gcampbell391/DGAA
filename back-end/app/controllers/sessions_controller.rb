@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
                 holes_played: @user.holes_played,
                 avg_score: @user.average_score,
                 avg_stroke: @user.average_throws_per_hole,
-                avg_diff: @user.average_difference_per_hole
+                avg_diff: @user.average_difference_per_hole,
+                followers: @user.followers
             }
         else
             render json: { status: 401 }

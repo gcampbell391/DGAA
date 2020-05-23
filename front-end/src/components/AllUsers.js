@@ -66,7 +66,7 @@ class AllUsers extends React.Component {
                                 </Card.Meta>
                             </Card.Content>
                             <Card.Content extra>
-                                <Button color="green" onClick={() => this.props.handleAddFriendClick(user)}>Add Friend</Button>
+                                <Button color="green" onClick={() => this.props.handleAddFriendClick(user)}>Follow</Button>
                             </Card.Content>
                         </Card>
                     })}

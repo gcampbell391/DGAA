@@ -28,7 +28,8 @@ class UsersController < ApplicationController
                 holes_played: @user.holes_played,
                 avg_score: @user.average_score,
                 avg_stroke: @user.average_throws_per_hole,
-                avg_diff: @user.average_difference_per_hole
+                avg_diff: @user.average_difference_per_hole,
+                followers: @user.followers
             }
         else
             render json: { status: 401 }
@@ -36,10 +37,8 @@ class UsersController < ApplicationController
     end
 
     def update 
-        byebug
         @user = User.find_by(id: params[:id])
         @user.update(user_params)
-        byebug
         @user.save
         render json: {
             status: :updated,
@@ -49,12 +48,11 @@ class UsersController < ApplicationController
 
     def add_friend
         friendship1 = UserFriend.find_or_create_by(user_id: params[:user_id], friend_id: params[:friend_id])
-        friendship2 = UserFriend.find_or_create_by(user_id: params[:friend_id], friend_id: params[:user_id])
         render json: {
-            friendship1: friendship1,
-            friendship2: friendship2
+            friendship1: friendship1
         }
     end
+
 
     def remove_friend
         friendship = UserFriend.find_by(id: params["_json"][0][:id])

@@ -116,7 +116,7 @@ class AccountHomeMap extends React.Component {
     render() {
         if (this.state.loading) {
             return (
-                <div >
+                <div className="loadingFiller">
                     <Dimmer active>
                         <Loader size='massive'>Preparing Game</Loader>
                     </Dimmer>

@@ -5,13 +5,13 @@ const MyFriends = (props) => {
     if (props.updatedFriends.length === 0) {
         return (
             <div className="myFriendsContainer">
-                <h1 id="noFriendsHeader">No Friends Added Yet.</h1>
+                <h1 id="noFriendsHeader">You're not following anyone yet.</h1>
             </div>
         )
     }
     return (
         <div className="myFriendsContainer">
-            <h1 className="allUsersHeader">My Friends</h1>
+            <h1 className="allUsersHeader">Following</h1>
             <Card.Group itemsPerRow={5} >
                 {props.updatedFriends.map(user => {
                     return <Card color='yellow' className="friendCardDetails">
@@ -23,7 +23,7 @@ const MyFriends = (props) => {
                             </Card.Meta>
                         </Card.Content>
                         <Card.Content extra>
-                            <Button color="red" onClick={() => props.removeFriendClick(user)}>Remove Friend</Button>
+                            <Button color="red" onClick={() => props.removeFriendClick(user)}>Stop Following</Button>
                         </Card.Content>
                     </Card>
                 })}

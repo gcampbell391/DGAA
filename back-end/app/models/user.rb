@@ -62,4 +62,15 @@ class User < ApplicationRecord
         average_throws_per_hole - average_par_per_hole 
     end
 
+    def followers
+        total_count = 0
+        allFollowers = UserFriend.all
+        allFollowers.each do |friendship|
+            if friendship.friend_id === self.id
+                total_count = total_count + 1
+            end
+        end
+        return total_count
+    end
+
 end
