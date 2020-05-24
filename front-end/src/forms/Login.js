@@ -12,7 +12,7 @@ const Login = (props) => (
         <Grid centered columns={2}>
             <Grid.Column>
                 <Segment>
-                    <Form size="large" onSubmit={(event) => props.handleLoginSubmit(event)}>
+                    <Form size="large" onSubmit={(event) => props.handleLoginSubmit(event)} id="LoginForm">
                         <Form.Input
                             required
                             fluid

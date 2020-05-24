@@ -19,7 +19,7 @@ const PlayerCard = (props) => {
                     <p>Last Name: {props.user.lastName} </p>
                     <p>Followers: {props.followers}</p>
                     <div className="userUpdatedBtns">
-                        <Button content='Update Password' icon='lock icon' labelPosition='left' onClick={props.handleEditPasswordClick} color="yellow" />
+                        <Button content='Update Password' icon='lock' labelPosition='left' onClick={props.handleEditPasswordClick} color="yellow" />
                     </div>
                 </div>
                 <div className="playerCardAddress">

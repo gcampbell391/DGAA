@@ -3,7 +3,6 @@ import { Button, Header, Image, Modal, Form } from 'semantic-ui-react'
 
 const SignUpModal = (props) => (
     <Modal open={props.renderSignUpForm}>
-        {console.log(props.renderSignUpForm)}
         <Modal.Header>Sign Up Today</Modal.Header>
         <Modal.Content image>
             <Image wrapped size='medium' src={require("../images/SignUpDisc.png")} alt="Discs Form Image" />

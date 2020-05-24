@@ -1,7 +1,9 @@
 import React from "react"
 import Strokes from "./Strokes"
+import history from "../history"
 
 const HoleDetails = (props) => {
+    console.log("Hole Details: ", props)
     if (props.hole) {
         return (
             <div className="holeDetails">
@@ -30,6 +32,10 @@ const HoleDetails = (props) => {
                 />
             </div>
         )
+    }
+    else {
+        console.log("This works?!?!?!?!")
+        history.push("/DGAA_Game_Play")
     }
 
 }

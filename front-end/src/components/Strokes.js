@@ -74,7 +74,7 @@ const Strokes = (props) => {
         <div className="strokesContainer" >
             <Form size="tiny" onSubmit={(event) => props.handleSubmitHoleBtn(event)}>
                 <p className="strokeUserHeader">DannyD</p>
-                <p className="strokeStandingHeader">Current Standing: {props.currentUserStanding}</p>
+                <p className="strokeStandingHeader">Current Standing: {props.currentUserStanding === 0 ? "Even" : props.currentUserStanding}</p>
                 <div className="strokeInputContainer">
                     <Dropdown placeholder='Select A Tee' search selection options={teeOptions} labelPosition='center' fluid id="teeHoleInput" />
                     <Dropdown placeholder='Enter Stroke' search selection options={strokeOptions} labelPosition='center' fluid id="strokeHoleInput" />

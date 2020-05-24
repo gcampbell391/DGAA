@@ -85,7 +85,6 @@ class Welcome extends React.Component {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
                 this.props.userSignUp(data)
                 this.setState({ renderSignUpForm: false })
             })
@@ -128,15 +127,13 @@ class Welcome extends React.Component {
                     handleSignUpCloseBtn={this.handleSignUpCloseBtn}
                     handleSignUpSubmit={this.handleSignUpSubmit}
                 />
-                <Container>
-                    <Login
-                        handleLoginSubmit={this.handleLoginSubmit}
-                        showLoginError={this.state.showLoginError}
-                        handleSignUpClick={this.handleSignUpClick}
-                    />
-                </Container>
+                <Login
+                    handleLoginSubmit={this.handleLoginSubmit}
+                    showLoginError={this.state.showLoginError}
+                    handleSignUpClick={this.handleSignUpClick}
+                />
                 <div id="DGAAMotto">
-                    <img src={require("../images/DGAAMoto.png")} alt="DGAA Motto"></img>
+                    <img src={require("../images/DGAAMoto.png")} alt="DGAA Motto" id="DGAAMottoImage"></img>
                 </div>
             </div>
         )

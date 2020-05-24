@@ -30,7 +30,7 @@ class Game extends React.Component {
         }
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.setState({
             course: this.props.course,
             coursePics: this.props.courseImgs,
@@ -89,7 +89,7 @@ class Game extends React.Component {
                 .then(data => {
                     swal({
                         title: "Round Complete!",
-                        text: `Final Standing:  ${this.state.currentUserStanding - strokeParDifference} .You may view the full ScoreCard on your Statistics Page.`,
+                        text: `Final Standing:  ${(this.state.currentUserStanding - strokeParDifference) === 0 ? "Even" : (this.state.currentUserStanding - strokeParDifference)} .You may view the full ScoreCard on your Statistics Page.`,
                         icon: "success",
                         button: "Return Home",
                     });
