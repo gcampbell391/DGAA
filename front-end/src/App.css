@@ -800,5 +800,15 @@ padding-bottom: 30px;
     font-weight: bold;
     text-shadow: 2px 2px yellow;
   }
+
+
+  .ui.nine.cards{
+    overflow-x: scroll;
+    height:110px;
+  }
+  .ui.nine.cards>.card{
+    width:30%;
+    height: 100%;
+  }
   
     }
