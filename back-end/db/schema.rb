@@ -12,15 +12,8 @@
 
 ActiveRecord::Schema.define(version: 2020_05_13_180335) do
 
-  create_table "dg_course_pictures", force: :cascade do |t|
-    t.integer "dgcourse_id", null: false
-    t.integer "DGCourseReviewApiId"
-    t.string "name"
-    t.string "imgSrc"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["dgcourse_id"], name: "index_dg_course_pictures_on_dgcourse_id"
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "dg_courses", force: :cascade do |t|
     t.integer "DGCourseReviewApiId"
@@ -40,8 +33,8 @@ ActiveRecord::Schema.define(version: 2020_05_13_180335) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "dg_course_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "dg_course_id", null: false
     t.integer "score", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -49,19 +42,8 @@ ActiveRecord::Schema.define(version: 2020_05_13_180335) do
     t.index ["user_id"], name: "index_games_on_user_id"
   end
 
-  create_table "holes", force: :cascade do |t|
-    t.integer "dgcourse_id", null: false
-    t.string "tee1Length"
-    t.string "tee1Par"
-    t.string "tee2Length", default: "0"
-    t.string "tee2Par", default: "0"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["dgcourse_id"], name: "index_holes_on_dgcourse_id"
-  end
-
   create_table "notifications", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.string "message"
     t.boolean "hasBeenSeen"
     t.datetime "created_at", precision: 6, null: false
@@ -70,7 +52,7 @@ ActiveRecord::Schema.define(version: 2020_05_13_180335) do
   end
 
   create_table "scorecards", force: :cascade do |t|
-    t.integer "game_id", null: false
+    t.bigint "game_id", null: false
     t.integer "strokeCount", default: 1
     t.integer "holeNum"
     t.integer "parCount"
@@ -80,7 +62,7 @@ ActiveRecord::Schema.define(version: 2020_05_13_180335) do
   end
 
   create_table "user_friends", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.integer "friend_id"
     t.boolean "accepted"
     t.datetime "created_at", precision: 6, null: false
@@ -102,10 +84,8 @@ ActiveRecord::Schema.define(version: 2020_05_13_180335) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "dg_course_pictures", "dgcourses"
   add_foreign_key "games", "dg_courses"
   add_foreign_key "games", "users"
-  add_foreign_key "holes", "dgcourses"
   add_foreign_key "notifications", "users"
   add_foreign_key "scorecards", "games"
   add_foreign_key "user_friends", "users"

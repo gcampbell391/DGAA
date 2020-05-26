@@ -128,6 +128,7 @@ class Game extends React.Component {
                     />
                     <HoleDetails
                         hole={this.state.course[this.state.currentHole]}
+                        holes={this.state.holes}
                         handleSubmitHoleBtn={this.handleSubmitHoleBtn}
                         currentUserStanding={this.state.currentUserStanding}
                     />

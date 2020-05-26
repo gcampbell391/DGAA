@@ -1,6 +1,6 @@
 import React from "react"
 import MapSearch from "../forms/MapSearch"
-import { Button } from 'semantic-ui-react'
+import { Button, Icon } from 'semantic-ui-react'
 
 
 
@@ -17,7 +17,7 @@ const PlayerCard = (props) => {
                     <p>Email: {props.user.email}</p>
                     <p>First Name: {props.user.firstName} </p>
                     <p>Last Name: {props.user.lastName} </p>
-                    <p>Followers: {props.followers}</p>
+                    <p>Followers: {props.followers} {props.followers >= 20 ? <Icon className='trophy' /> : null}</p>
                     <div className="userUpdatedBtns">
                         <Button content='Update Password' icon='lock' labelPosition='left' onClick={props.handleEditPasswordClick} color="yellow" />
                     </div>

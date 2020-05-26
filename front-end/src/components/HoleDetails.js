@@ -1,13 +1,12 @@
 import React from "react"
 import Strokes from "./Strokes"
-import history from "../history"
 
 const HoleDetails = (props) => {
     console.log("Hole Details: ", props)
     if (props.hole) {
         return (
             <div className="holeDetails">
-                <h1 className="holeContainerHeader">Hole {props.hole.hole_num}</h1>
+                <h1 className="holeContainerHeader">Hole {props.hole.hole_num} out of {props.holes}</h1>
                 <div className="teeParContainer">
                     <div className="tee1Container">
                         <h1 className="teeHeader">Tee 1</h1>
@@ -33,11 +32,6 @@ const HoleDetails = (props) => {
             </div>
         )
     }
-    else {
-        console.log("This works?!?!?!?!")
-        history.push("/DGAA_Game_Play")
-    }
-
 }
 
 export default HoleDetails
