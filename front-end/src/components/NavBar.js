@@ -26,7 +26,7 @@ const NavBar = (props) => {
             <div className="NavBarContainer">
                 <NavLink to="/Account_Home" exact ><FontAwesomeIcon icon={faHome} style={{ color: 'limegreen' }} size="3x" className="NavBarIcon" /></NavLink>
                 <NavLink to="/Statistics" exact ><FontAwesomeIcon icon={faChartBar} style={{ color: 'limegreen' }} size="3x" className="NavBarIcon" /></NavLink>
-                <NavLink to="/My_Friends" exact ><FontAwesomeIcon icon={faUsers} style={{ color: 'limegreen' }} size="3x" className="NavBarIcon" /></NavLink>
+                <NavLink to="/Followers" exact ><FontAwesomeIcon icon={faUsers} style={{ color: 'limegreen' }} size="3x" className="NavBarIcon" /></NavLink>
                 <NavLink to="/" exact ><FontAwesomeIcon icon={faSignOutAlt} style={{ color: 'crimson' }} size="3x" className="NavBarIcon" onClick={props.handleLogOutClick} /></NavLink>
             </div>)
     }

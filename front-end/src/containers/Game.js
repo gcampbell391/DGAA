@@ -13,38 +13,23 @@ class Game extends React.Component {
     constructor() {
         super();
         this.state = {
-            course: {
-                name: "Loading..."
-            },
-            holes: null,
-            coursePics: {
-                course_photo_url_medium: require("../images/DGCourseDefault.jpeg"),
-                course_photo_caption: "Loading..."
-            },
             loading: true,
             currentHole: 1,
             currentUserScoreScard: [],
             loadingNextHole: false,
-            currentUserStanding: 0,
-            currentUser: null
+            currentUserStanding: 0
         }
     }
 
-    componentWillMount() {
-        this.setState({
-            course: this.props.course,
-            coursePics: this.props.courseImgs,
-            holes: this.props.course["length"] - 1,
-            currentUser: this.props.currentUser
-        })
+    componentDidMount() {
         setTimeout(() => {
             this.setState({ loading: false })
-        }, 2000);
+        }, 1000);
     }
 
     handleSubmitHoleBtn = (event) => {
         event.preventDefault();
-        const currentHole = this.state.course[this.state.currentHole]
+        const currentHole = this.props.course[this.state.currentHole]
         const teeSelection = event.target.querySelector("#teeHoleInput").querySelector(".text").innerText
         if (teeSelection === "Select A Tee") {
             return swal("Please Enter a Tee Option!")
@@ -70,11 +55,11 @@ class Game extends React.Component {
             this.setState({ currentHole: this.state.currentHole + 1 })
             this.setState({ loadingNextHole: false })
         }, 1000);
-        if (this.state.currentHole >= this.state.holes) {
+        if (this.state.currentHole >= (this.props.course["length"] - 1)) {
             console.log("Game Completed!!!")
             console.log("Final ScoreCard: ", [...this.state.currentUserScoreScard, userHoleInfo])
             const gameDetails = {
-                user: this.state.currentUser,
+                user: this.props.currentUser,
                 finalScoreCard: [...this.state.currentUserScoreScard, userHoleInfo],
                 course: this.props.course[0]
             }
@@ -117,20 +102,22 @@ class Game extends React.Component {
                 </div>
             )
         }
+        console.log("props course:", this.props.course)
         return (
+
             <div className="welcomeBodyContainer">
                 <Header />
                 <div className="gameContainer">
 
                     <CourseDetails
                         course={this.props.course[0]}
-                        coursePics={this.state.coursePics}
+                        coursePics={this.props.courseImgs}
                     />
                     <HoleDetails
-                        hole={this.state.course[this.state.currentHole]}
-                        holes={this.state.holes}
+                        hole={this.props.course[this.state.currentHole]}
                         handleSubmitHoleBtn={this.handleSubmitHoleBtn}
                         currentUserStanding={this.state.currentUserStanding}
+                        holes={this.props.course["length"] - 1}
                     />
                 </div>
                 <ScoreCard

@@ -108,11 +108,8 @@ class AccountHomeMap extends React.Component {
             .then(resp => resp.json())
             .then(data => {
                 this.props.addCoursePictures(data)
-                setTimeout(() => {
-                    this.setState({ loading: false })
-                    history.push("/DGAA_Game_Play")
-                }, 1000);
-
+                this.setState({ loading: false })
+                history.push("/DGAA_Game_Play")
             })
     }
 

@@ -77,7 +77,7 @@ class Friends extends React.Component {
                     let count = 0
                     while (count < this.state.myFriends.length) {
                         if (this.state.myFriends[count].friend_id === data.friendship1.friend_id) {
-                            swal("You're already friends!")
+                            swal("You're already following this player!")
                             return this.state.myFriends
                         }
                         count++
